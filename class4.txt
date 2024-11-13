@@ -1,0 +1,3514 @@
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| lco_films          |
+| movies_database    |
+| movies_db_pw       |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+7 rows in set (0.00 sec)
+
+mysql> use lco_films;
+Database changed
+mysql>
+mysql> select first_name, last_name , address , district from actor join address on actor.address_id = address.address_id;
++-------------+--------------+----------------------------------------+----------------------+
+| first_name  | last_name    | address                                | district             |
++-------------+--------------+----------------------------------------+----------------------+
+| PENELOPE    | GUINESS      | 47 MySakila Drive                      | Alberta              |
+| NICK        | WAHLBERG     | 1411 Lillydale Drive                   | QLD                  |
+| ED          | CHASE        | 28 MySQL Boulevard                     | QLD                  |
+| JENNIFER    | DAVIS        | 23 Workhaven Lane                      | Alberta              |
+| JOHNNY      | LOLLOBRIGIDA | 1913 Hanoi Way                         | Nagasaki             |
+| BETTE       | NICHOLSON    | 692 Joliet Street                      | Attika               |
+| GRACE       | MOSTEL       | 1121 Loja Avenue                       | California           |
+| MATTHEW     | JOHANSSON    | 1566 Inegl Manor                       | Mandalay             |
+| JOE         | SWANK        | 1795 Santiago de Compostela Way        | Texas                |
+| CHRISTIAN   | GABLE        | 53 Idfu Parkway                        | Nantou               |
+| ZERO        | CAGE         | 900 Santiago de Compostela Parkway     | Central Serbia       |
+| KARL        | BERRY        | 613 Korolev Drive                      | Masqat               |
+| UMA         | WOOD         | 1867 San Juan Bautista Tuxtepec Avenue | Ivanovo              |
+| VIVIEN      | BERGEN       | 262 A Corua (La Corua) Parkway         | Dhaka                |
+| CUBA        | OLIVIER      | 334 Munger (Monghyr) Lane              | Markazi              |
+| FRED        | COSTNER      | 915 Ponce Place                        | Basel-Stadt          |
+| HELEN       | VOIGHT       | 1947 Poos de Caldas Boulevard          | Chiayi               |
+| DAN         | TORN         | 1936 Lapu-Lapu Parkway                 | Bauchi & Gombe       |
+| BOB         | FAWCETT      | 211 Chiayi Drive                       | Uttar Pradesh        |
+| LUCILLE     | TRACY        | 602 Paarl Street                       | Pavlodar             |
+| KIRSTEN     | PALTROW      | 1697 Tanauan Lane                      | Punjab               |
+| ELVIS       | MARX         | 671 Graz Street                        | Oriental             |
+| SANDRA      | KILMER       | 786 Aurora Avenue                      | Yamaguchi            |
+| CAMERON     | STREEP       | 1213 Ranchi Parkway                    | Karnataka            |
+| KEVIN       | BLOOM        | 1214 Hanoi Way                         | Nebraska             |
+| RIP         | CRAWFORD     | 1632 Bislig Avenue                     | Nonthaburi           |
+| JULIA       | MCQUEEN      | 1447 Imus Way                          | Tahiti               |
+| WOODY       | HOFFMAN      | 17 Kabul Boulevard                     | Chiba                |
+| ALEC        | WAYNE        | 1124 Buenaventura Drive                | Mekka                |
+| SANDRA      | PECK         | 492 Cam Ranh Street                    | Eastern Visayas      |
+| SISSY       | SOBIESKI     | 808 Bhopal Manor                       | Haryana              |
+| TIM         | HACKMAN      | 1966 Amroha Avenue                     | Sichuan              |
+| MILLA       | PECK         | 927 Baha Blanca Parkway                | Krim                 |
+| AUDREY      | OLIVIER      | 1206 Dos Quebradas Place               | So Paulo             |
+| JUDY        | DEAN         | 725 Isesaki Place                      | Mekka                |
+| BURT        | DUKAKIS      | 33 Gorontalo Way                       | West Bengali         |
+| VAL         | BOLGER       | 57 Arlington Manor                     | Madhya Pradesh       |
+| TOM         | MCKELLEN     | 1780 Hino Boulevard                    | Liepaja              |
+| GOLDIE      | BRODY        | 1717 Guadalajara Lane                  | Missouri             |
+| JOHNNY      | CAGE         | 943 Tokat Street                       | Vaduz                |
+| JODIE       | DEGENERES    | 269 Cam Ranh Parkway                   | Chisinau             |
+| TOM         | MIRANDA      | 1551 Rampur Lane                       | Changhwa             |
+| KIRK        | JOVOVICH     | 1688 Okara Way                         | Nothwest Border Prov |
+| NICK        | STALLONE     | 832 Nakhon Sawan Manor                 | Inner Mongolia       |
+| REESE       | KILMER       | 1308 Arecibo Way                       | Georgia              |
+| PARKER      | GOLDBERG     | 264 Bhimavaram Manor                   | St Thomas            |
+| JULIA       | BARRYMORE    | 1913 Kamakura Place                    | Lipetsk              |
+| FRANCES     | DAY-LEWIS    | 1386 Yangor Avenue                     | Provence-Alpes-Cte   |
+| ANNE        | CRONYN       | 848 Tafuna Manor                       | Ktahya               |
+| NATALIE     | HOPKINS      | 115 Hidalgo Parkway                    | Khartum              |
+| GARY        | PHOENIX      | 1074 Binzhou Manor                     | Baden-Wrttemberg     |
+| CARMEN      | HUNT         | 798 Cianjur Avenue                     | Shanxi               |
+| MENA        | TEMPLE       | 781 Shimonoseki Drive                  | Michoacn de Ocampo   |
+| PENELOPE    | PINKETT      | 1792 Valle de la Pascua Place          | Nordrhein-Westfalen  |
+| FAY         | KILMER       | 419 Iligan Lane                        | Madhya Pradesh       |
+| DAN         | HARRIS       | 1427 A Corua (La Corua) Place          | Buenos Aires         |
+| JUDE        | CRUISE       | 241 Mosul Lane                         | Risaralda            |
+| CHRISTIAN   | AKROYD       | 1967 Sincelejo Place                   | Gujarat              |
+| DUSTIN      | TAUTOU       | 1107 Nakhon Sawan Avenue               | Mxico                |
+| HENRY       | BERRY        | 140 Chiayi Parkway                     | Sumy                 |
+| CHRISTIAN   | NEESON       | 682 Garden Grove Place                 | Tennessee            |
+| JAYNE       | NEESON       | 1157 Nyeri Loop                        | Adygea               |
+| CAMERON     | WRAY         | 1752 So Leopoldo Parkway               | Taka-Karpatia        |
+| RAY         | JOHANSSON    | 782 Mosul Street                       | Massachusetts        |
+| ANGELA      | HUDSON       | 588 Vila Velha Manor                   | Kyongsangbuk         |
+| MARY        | TANDY        | 1001 Miyakonojo Lane                   | Taizz                |
+| JESSICA     | BAILEY       | 42 Brindisi Place                      | Yerevan              |
+| RIP         | WINSLET      | 1027 Songkhla Manor                    | Minsk                |
+| KENNETH     | PALTROW      | 1410 Benin City Parkway                | Risaralda            |
+| MICHELLE    | MCCONAUGHEY  | 1158 Mandi Bahauddin Parkway           | Shanxi               |
+| ADAM        | GRANT        | 752 Ondo Loop                          | Miyazaki             |
+| SEAN        | WILLIAMS     | 1309 Weifang Street                    | Florida              |
+| GARY        | PENN         | 316 Uruapan Street                     | Perak                |
+| MILLA       | KEITEL       | 456 Escobar Way                        | Jakarta Raya         |
+| BURT        | POSEY        | 1749 Daxian Place                      | Gelderland           |
+| ANGELINA    | ASTAIRE      | 804 Elista Drive                       | Hubei                |
+| CARY        | MCCONAUGHEY  | 543 Bergamo Avenue                     | Minas Gerais         |
+| GROUCHO     | SINATRA      | 1002 Ahmadnagar Manor                  | Mxico                |
+| MAE         | HOFFMAN      | 682 Junan Way                          | North West           |
+| RALPH       | CRUZ         | 1050 Garden Grove Avenue               | Slaskie              |
+| SCARLETT    | DAMON        | 1987 Coacalco de Berriozbal Loop       | al-Qalyubiya         |
+| WOODY       | JOLIE        | 801 Hagonoy Drive                      | Smolensk             |
+| BEN         | WILLIS       | 1089 Iwatsuki Avenue                   | Kirov                |
+| JAMES       | PITT         | 765 Southampton Drive                  | al-Qalyubiya         |
+| MINNIE      | ZELLWEGER    | 1540 Wroclaw Drive                     | Maharashtra          |
+| GREG        | CHAPLIN      | 1079 Tel Aviv-Jaffa Boulevard          | Sucre                |
+| SPENCER     | PECK         | 954 Kimchon Place                      | West Bengali         |
+| KENNETH     | PESCI        | 43 Dadu Avenue                         | Rajasthan            |
+| CHARLIZE    | DENCH        | 660 Jedda Boulevard                    | Washington           |
+| SEAN        | GUINESS      | 817 Bradford Loop                      | Jiangsu              |
+| CHRISTOPHER | BERRY        | 442 Rae Bareli Place                   | Nordrhein-Westfalen  |
+| KIRSTEN     | AKROYD       | 146 Johannesburg Way                   | Tamaulipas           |
+| ELLEN       | PRESLEY      | 1229 Valencia Parkway                  | Haskovo              |
+| KENNETH     | TORN         | 1029 Dzerzinsk Manor                   | Ynlin                |
+| DARYL       | WAHLBERG     | 1666 Beni-Mellal Place                 | Tennessee            |
+| GENE        | WILLIS       | 1839 Szkesfehrvr Parkway               | Gois                 |
+| MEG         | HAWKE        | 1848 Salala Boulevard                  | Miranda              |
+| CHRIS       | BRIDGES      | 793 Cam Ranh Avenue                    | California           |
+| JIM         | MOSTEL       | 1386 Nakhon Sawan Boulevard            | Pyongyang-si         |
+| SPENCER     | DEPP         | 1587 Sullana Lane                      | Inner Mongolia       |
+| SUSAN       | DAVIS        | 1964 Gijn Manor                        | Karnataka            |
+| WALTER      | TORN         | 1294 Firozabad Drive                   | Jiangxi              |
+| MATTHEW     | LEIGH        | 261 Saint Louis Way                    | Coahuila de Zaragoza |
+| PENELOPE    | CRONYN       | 842 Salzburg Lane                      | Adana                |
+| SIDNEY      | CROWE        | 533 al-Ayn Boulevard                   | California           |
+| GROUCHO     | DUNST        | 447 Surakarta Loop                     | Nyanza               |
+| GINA        | DEGENERES    | 154 Tallahassee Loop                   | Xinxiang             |
+| WARREN      | NOLTE        | 698 Otsu Street                        | Cayenne              |
+| SYLVESTER   | DERN         | 1010 Klerksdorp Way                    | Steiermark           |
+| SUSAN       | DAVIS        | 741 Ambattur Manor                     | Noord-Brabant        |
+| CAMERON     | ZELLWEGER    | 1854 Tieli Street                      | Shandong             |
+| RUSSELL     | BACALL       | 333 Goinia Way                         | Texas                |
+| MORGAN      | HOPKINS      | 1532 Dzerzinsk Way                     | Buenos Aires         |
+| MORGAN      | MCDORMAND    | 850 Salala Loop                        | Kitaa                |
+| HARRISON    | BALE         | 356 Olomouc Manor                      | Gois                 |
+| DAN         | STREEP       | 226 Halifax Street                     | Xinxiang             |
+| RENEE       | TRACY        | 85 San Felipe de Puerto Plata Drive    | Shandong             |
+| CUBA        | ALLEN        | 1736 Cavite Place                      | Qina                 |
+| WARREN      | JACKMAN      | 446 Kirovo-Tepetsk Lane                | Osaka                |
+| PENELOPE    | MONROE       | 1192 Tongliao Street                   | Sharja               |
+| LIZA        | BERGMAN      | 1308 Sumy Loop                         | Fujian               |
+| SALMA       | NOLTE        | 1831 Nam Dinh Loop                     | National Capital Reg |
+| JULIANNE    | DENCH        | 647 A Corua (La Corua) Street          | Chollanam            |
+| SCARLETT    | BENING       | 47 Syktyvkar Lane                      | West Java            |
+| ALBERT      | NOLTE        | 1944 Bamenda Way                       | Michigan             |
+| FRANCES     | TOMEI        | 226 Brest Manor                        | California           |
+| KEVIN       | GARLAND      | 457 Tongliao Loop                      | Bursa                |
+| CATE        | MCQUEEN      | 346 Skikda Parkway                     | Hawalli              |
+| DARYL       | CRAWFORD     | 1215 Pyongyang Parkway                 | Usak                 |
+| GRETA       | KEITEL       | 387 Mwene-Ditu Drive                   | Ahal                 |
+| JANE        | JACKMAN      | 751 Lima Loop                          | Aden                 |
+| ADAM        | HOPPER       | 1842 Luzinia Boulevard                 | Zanzibar West        |
+| RICHARD     | PENN         | 1168 Najafabad Parkway                 | Kabol                |
+| GENE        | HOPKINS      | 1473 Changhwa Parkway                  | Mxico                |
+| RITA        | REYNOLDS     | 829 Grand Prairie Way                  | Paran                |
+| ED          | MANSFIELD    | 1497 Yuzhou Drive                      | England              |
+| MORGAN      | WILLIAMS     | 1103 Bilbays Parkway                   | Hubei                |
+| LUCILLE     | DEE          | 430 Alessandria Loop                   | Saarland             |
+| EWAN        | GOODING      | 1926 Gingoog Street                    | Sisilia              |
+| WHOOPI      | HURT         | 1256 Bislig Boulevard                  | Botosani             |
+| CATE        | HARRIS       | 1304 s-Hertogenbosch Way               | Santa Catarina       |
+| JADA        | RYDER        | 885 Yingkou Manor                      | Kaduna               |
+| RIVER       | DEAN         | 176 Mandaluyong Place                  | Uttar Pradesh        |
+| ANGELA      | WITHERSPOON  | 81 Hodeida Way                         | Rajasthan            |
+| KIM         | ALLEN        | 1027 Banjul Place                      | West Bengali         |
+| ALBERT      | JOHANSSON    | 898 Belm Manor                         | Free State           |
+| FAY         | WINSLET      | 1201 Qomsheh Manor                     | Gois                 |
+| EMILY       | DEE          | 1679 Antofagasta Street                | Alto Paran           |
+| RUSSELL     | TEMPLE       | 1191 Sungai Petani Boulevard           | Missouri             |
+| JAYNE       | NOLTE        | 68 Ponce Parkway                       | Hanoi                |
+| GEOFFREY    | HESTON       | 1892 Nabereznyje Telny Lane            | Tutuila              |
+| BEN         | HARRIS       | 715 So Bernardo do Campo Lane          | Kedah                |
+| MINNIE      | KILMER       | 430 Kumbakonam Drive                   | Santa F              |
+| MERYL       | GIBSON       | 1838 Tabriz Lane                       | Dhaka                |
+| IAN         | TANDY        | 1145 Vilnius Manor                     | Mxico                |
+| FAY         | WOOD         | 1635 Kuwana Boulevard                  | Hiroshima            |
+| GRETA       | MALDEN       | 469 Nakhon Sawan Street                | Tuvassia             |
+| VIVIEN      | BASINGER     | 1009 Zanzibar Lane                     | Arecibo              |
+| LAURA       | BRODY        | 114 Jalib al-Shuyukh Manor             | Centre               |
+| CHRIS       | DEPP         | 154 Oshawa Manor                       | East Java            |
+| HARVEY      | HOPE         | 1049 Matamoros Parkway                 | Karnataka            |
+| OPRAH       | KILMER       | 1641 Changhwa Place                    | Nord-Ouest           |
+| CHRISTOPHER | WEST         | 368 Hunuco Boulevard                   | Namibe               |
+| HUMPHREY    | WILLIS       | 401 Sucre Boulevard                    | New Hampshire        |
+| AL          | GARLAND      | 1368 Maracabo Boulevard                |                      |
+| NICK        | DEGENERES    | 913 Coacalco de Berriozbal Loop        | Texas                |
+| LAURENCE    | BULLOCK      | 1224 Huejutla de Reyes Boulevard       | Lombardia            |
+| WILL        | WILSON       | 1860 Taguig Loop                       | West Java            |
+| KENNETH     | HOFFMAN      | 898 Jining Lane                        | Pohjois-Pohjanmaa    |
+| MENA        | HOPPER       | 780 Kimberley Way                      | Tabuk                |
+| OLYMPIA     | PFEIFFER     | 1912 Emeishan Drive                    | Balikesir            |
+| GROUCHO     | WILLIAMS     | 1698 Southport Loop                    | Hidalgo              |
+| ALAN        | DREYFUSS     | 817 Laredo Avenue                      | Jalisco              |
+| MICHAEL     | BENING       | 1658 Jastrzebie-Zdrj Loop              | Central              |
+| WILLIAM     | HACKMAN      | 614 Pak Kret Street                    | Addis Abeba          |
+| JON         | CHASE        | 661 Chisinau Lane                      | Pietari              |
+| GENE        | MCKELLEN     | 41 El Alto Parkway                     | Maharashtra          |
+| LISA        | MONROE       | 519 Nyeri Manor                        | So Paulo             |
+| ED          | GUINESS      | 381 Kabul Way                          | Taipei               |
+| JEFF        | SILVERSTONE  | 687 Alessandria Parkway                | Sanaa                |
+| MATTHEW     | CARREY       | 1519 Santiago de los Caballeros Loop   | East Kasai           |
+| DEBBIE      | AKROYD       | 1957 Yantai Lane                       | So Paulo             |
+| RUSSELL     | CLOSE        | 651 Pathankot Loop                     | Maharashtra          |
+| HUMPHREY    | GARLAND      | 1354 Siegen Street                     | Rio de Janeiro       |
+| MICHAEL     | BOLGER       | 1599 Plock Drive                       | Tete                 |
+| JULIA       | ZELLWEGER    | 951 Stara Zagora Manor                 | Punjab               |
+| RENEE       | BALL         | 1908 Gaziantep Place                   | Liaoning             |
+| ROCK        | DUKAKIS      | 230 Urawa Drive                        | Andhra Pradesh       |
+| CUBA        | BIRCH        | 1920 Weifang Avenue                    | Uttar Pradesh        |
+| AUDREY      | BAILEY       | 532 Toulon Street                      | Santiago             |
+| GREGORY     | GOODING      | 503 Sogamoso Loop                      | Sumqayit             |
+| JOHN        | SUVARI       | 604 Bern Place                         | Jharkhand            |
+| BURT        | TEMPLE       | 98 Stara Zagora Boulevard              | Valle                |
+| MERYL       | ALLEN        | 1479 Rustenburg Boulevard              | Southern Tagalog     |
+| JAYNE       | SILVERSTONE  | 1293 Nam Dinh Way                      | Roraima              |
+| BELA        | WALKEN       | 1628 Nagareyama Lane                   | Central              |
+| REESE       | WEST         | 619 Hunuco Avenue                      | Shimane              |
+| MARY        | KEITEL       | 127 Iwakuni Boulevard                  | Central Luzon        |
+| JULIA       | FAWCETT      | 45 Aparecida de Goinia Place           | Madhya Pradesh       |
+| THORA       | TEMPLE       | 168 Cianjur Manor                      | Saitama              |
++-------------+--------------+----------------------------------------+----------------------+
+200 rows in set (0.01 sec)
+
+mysql> select first_name, last_name , address , district from actor join address on actor.address_id = address.address_id limit 10;
++------------+--------------+---------------------------------+------------+
+| first_name | last_name    | address                         | district   |
++------------+--------------+---------------------------------+------------+
+| PENELOPE   | GUINESS      | 47 MySakila Drive               | Alberta    |
+| NICK       | WAHLBERG     | 1411 Lillydale Drive            | QLD        |
+| ED         | CHASE        | 28 MySQL Boulevard              | QLD        |
+| JENNIFER   | DAVIS        | 23 Workhaven Lane               | Alberta    |
+| JOHNNY     | LOLLOBRIGIDA | 1913 Hanoi Way                  | Nagasaki   |
+| BETTE      | NICHOLSON    | 692 Joliet Street               | Attika     |
+| GRACE      | MOSTEL       | 1121 Loja Avenue                | California |
+| MATTHEW    | JOHANSSON    | 1566 Inegl Manor                | Mandalay   |
+| JOE        | SWANK        | 1795 Santiago de Compostela Way | Texas      |
+| CHRISTIAN  | GABLE        | 53 Idfu Parkway                 | Nantou     |
++------------+--------------+---------------------------------+------------+
+10 rows in set (0.00 sec)
+
+mysql> select first_name, last_name , address , district from actor join address on actor.address_id = address.address_id join city on address.city_id = city.city_id limit ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> select first_name, last_name , address , district from actor join address on actor.address_id = address.address_id join city on address.city_id = city.city_id limit 10;
++------------+--------------+---------------------------------+------------+
+| first_name | last_name    | address                         | district   |
++------------+--------------+---------------------------------+------------+
+| PENELOPE   | GUINESS      | 47 MySakila Drive               | Alberta    |
+| NICK       | WAHLBERG     | 1411 Lillydale Drive            | QLD        |
+| ED         | CHASE        | 28 MySQL Boulevard              | QLD        |
+| JENNIFER   | DAVIS        | 23 Workhaven Lane               | Alberta    |
+| JOHNNY     | LOLLOBRIGIDA | 1913 Hanoi Way                  | Nagasaki   |
+| BETTE      | NICHOLSON    | 692 Joliet Street               | Attika     |
+| GRACE      | MOSTEL       | 1121 Loja Avenue                | California |
+| MATTHEW    | JOHANSSON    | 1566 Inegl Manor                | Mandalay   |
+| JOE        | SWANK        | 1795 Santiago de Compostela Way | Texas      |
+| CHRISTIAN  | GABLE        | 53 Idfu Parkway                 | Nantou     |
++------------+--------------+---------------------------------+------------+
+10 rows in set (0.00 sec)
+
+mysql> select first_name, last_name , address , district,city from actor join address on actor.address_id = address.address_id join city on address.city_id = city.city_id limit 10;
++------------+--------------+---------------------------------+------------+----------------+
+| first_name | last_name    | address                         | district   | city           |
++------------+--------------+---------------------------------+------------+----------------+
+| PENELOPE   | GUINESS      | 47 MySakila Drive               | Alberta    | Lethbridge     |
+| NICK       | WAHLBERG     | 1411 Lillydale Drive            | QLD        | Woodridge      |
+| ED         | CHASE        | 28 MySQL Boulevard              | QLD        | Woodridge      |
+| JENNIFER   | DAVIS        | 23 Workhaven Lane               | Alberta    | Lethbridge     |
+| JOHNNY     | LOLLOBRIGIDA | 1913 Hanoi Way                  | Nagasaki   | Sasebo         |
+| BETTE      | NICHOLSON    | 692 Joliet Street               | Attika     | Athenai        |
+| GRACE      | MOSTEL       | 1121 Loja Avenue                | California | San Bernardino |
+| MATTHEW    | JOHANSSON    | 1566 Inegl Manor                | Mandalay   | Myingyan       |
+| JOE        | SWANK        | 1795 Santiago de Compostela Way | Texas      | Laredo         |
+| CHRISTIAN  | GABLE        | 53 Idfu Parkway                 | Nantou     | Nantou         |
++------------+--------------+---------------------------------+------------+----------------+
+10 rows in set (0.00 sec)
+
+mysql> select first_name, last_name , address , district from actor right outer join address on actor.address_id = address.address_id ;
++-------------+--------------+----------------------------------------+----------------------+
+| first_name  | last_name    | address                                | district             |
++-------------+--------------+----------------------------------------+----------------------+
+| PENELOPE    | GUINESS      | 47 MySakila Drive                      | Alberta              |
+| ED          | CHASE        | 28 MySQL Boulevard                     | QLD                  |
+| JENNIFER    | DAVIS        | 23 Workhaven Lane                      | Alberta              |
+| NICK        | WAHLBERG     | 1411 Lillydale Drive                   | QLD                  |
+| JOHNNY      | LOLLOBRIGIDA | 1913 Hanoi Way                         | Nagasaki             |
+| GRACE       | MOSTEL       | 1121 Loja Avenue                       | California           |
+| BETTE       | NICHOLSON    | 692 Joliet Street                      | Attika               |
+| MATTHEW     | JOHANSSON    | 1566 Inegl Manor                       | Mandalay             |
+| CHRISTIAN   | GABLE        | 53 Idfu Parkway                        | Nantou               |
+| JOE         | SWANK        | 1795 Santiago de Compostela Way        | Texas                |
+| ZERO        | CAGE         | 900 Santiago de Compostela Parkway     | Central Serbia       |
+| NULL        | NULL         | 478 Joliet Way                         | Hamilton             |
+| KARL        | BERRY        | 613 Korolev Drive                      | Masqat               |
+| NULL        | NULL         | 1531 Sal Drive                         | Esfahan              |
+| NULL        | NULL         | 1542 Tarlac Parkway                    | Kanagawa             |
+| SISSY       | SOBIESKI     | 808 Bhopal Manor                       | Haryana              |
+| NULL        | NULL         | 270 Amroha Parkway                     | Osmaniye             |
+| NULL        | NULL         | 770 Bydgoszcz Avenue                   | California           |
+| FAY         | KILMER       | 419 Iligan Lane                        | Madhya Pradesh       |
+| NULL        | NULL         | 360 Toulouse Parkway                   | England              |
+| NULL        | NULL         | 270 Toulon Boulevard                   | Kalmykia             |
+| NULL        | NULL         | 320 Brest Avenue                       | Kaduna               |
+| NULL        | NULL         | 1417 Lancaster Avenue                  | Northern Cape        |
+| KIRK        | JOVOVICH     | 1688 Okara Way                         | Nothwest Border Prov |
+| VIVIEN      | BERGEN       | 262 A Corua (La Corua) Parkway         | Dhaka                |
+| NULL        | NULL         | 28 Charlotte Amalie Street             | Rabat-Sal-Zammour-Z  |
+| TOM         | MCKELLEN     | 1780 Hino Boulevard                    | Liepaja              |
+| NULL        | NULL         | 96 Tafuna Way                          | Crdoba               |
+| NULL        | NULL         | 934 San Felipe de Puerto Plata Street  | Sind                 |
+| NULL        | NULL         | 18 Duisburg Boulevard                  |                      |
+| NULL        | NULL         | 217 Botshabelo Place                   | Southern Mindanao    |
+| NULL        | NULL         | 1425 Shikarpur Manor                   | Bihar                |
+| SANDRA      | KILMER       | 786 Aurora Avenue                      | Yamaguchi            |
+| NULL        | NULL         | 1668 Anpolis Street                    | Taipei               |
+| BURT        | DUKAKIS      | 33 Gorontalo Way                       | West Bengali         |
+| RIVER       | DEAN         | 176 Mandaluyong Place                  | Uttar Pradesh        |
+| NULL        | NULL         | 127 Purnea (Purnia) Manor              | Piemonte             |
+| NULL        | NULL         | 61 Tama Street                         | Okayama              |
+| NULL        | NULL         | 391 Callao Drive                       | Midi-Pyrnes          |
+| CUBA        | OLIVIER      | 334 Munger (Monghyr) Lane              | Markazi              |
+| NULL        | NULL         | 1440 Fukuyama Loop                     | Henan                |
+| JODIE       | DEGENERES    | 269 Cam Ranh Parkway                   | Chisinau             |
+| NULL        | NULL         | 306 Antofagasta Place                  | Esprito Santo        |
+| ELVIS       | MARX         | 671 Graz Street                        | Oriental             |
+| JESSICA     | BAILEY       | 42 Brindisi Place                      | Yerevan              |
+| RIP         | CRAWFORD     | 1632 Bislig Avenue                     | Nonthaburi           |
+| JULIA       | MCQUEEN      | 1447 Imus Way                          | Tahiti               |
+| NULL        | NULL         | 1998 Halifax Drive                     | Lipetsk              |
+| NULL        | NULL         | 1718 Valencia Street                   | Antofagasta          |
+| NULL        | NULL         | 46 Pjatigorsk Lane                     | Moscow (City)        |
+| NULL        | NULL         | 686 Garland Manor                      | Cear                 |
+| NULL        | NULL         | 909 Garland Manor                      | Tatarstan            |
+| JUDY        | DEAN         | 725 Isesaki Place                      | Mekka                |
+| NATALIE     | HOPKINS      | 115 Hidalgo Parkway                    | Khartum              |
+| NULL        | NULL         | 1135 Izumisano Parkway                 | California           |
+| NULL        | NULL         | 939 Probolinggo Loop                   | Galicia              |
+| WOODY       | HOFFMAN      | 17 Kabul Boulevard                     | Chiba                |
+| NULL        | NULL         | 1964 Allappuzha (Alleppey) Street      | Yamaguchi            |
+| NULL        | NULL         | 1697 Kowloon and New Kowloon Loop      | Moskova              |
+| NULL        | NULL         | 1668 Saint Louis Place                 | Tahiti               |
+| JOHNNY      | CAGE         | 943 Tokat Street                       | Vaduz                |
+| NULL        | NULL         | 1114 Liepaja Street                    | Sarawak              |
+| CAMERON     | STREEP       | 1213 Ranchi Parkway                    | Karnataka            |
+| ANGELA      | WITHERSPOON  | 81 Hodeida Way                         | Rajasthan            |
+| FRED        | COSTNER      | 915 Ponce Place                        | Basel-Stadt          |
+| GOLDIE      | BRODY        | 1717 Guadalajara Lane                  | Missouri             |
+| KEVIN       | BLOOM        | 1214 Hanoi Way                         | Nebraska             |
+| TIM         | HACKMAN      | 1966 Amroha Avenue                     | Sichuan              |
+| WARREN      | NOLTE        | 698 Otsu Street                        | Cayenne              |
+| NULL        | NULL         | 1150 Kimchon Manor                     | Skne ln              |
+| NULL        | NULL         | 1586 Guaruj Place                      | Hunan                |
+| VAL         | BOLGER       | 57 Arlington Manor                     | Madhya Pradesh       |
+| NULL        | NULL         | 1031 Daugavpils Parkway                | Bchar                |
+| ALEC        | WAYNE        | 1124 Buenaventura Drive                | Mekka                |
+| SANDRA      | PECK         | 492 Cam Ranh Street                    | Eastern Visayas      |
+| NULL        | NULL         | 89 Allappuzha (Alleppey) Manor         | National Capital Reg |
+| HELEN       | VOIGHT       | 1947 Poos de Caldas Boulevard          | Chiayi               |
+| AUDREY      | OLIVIER      | 1206 Dos Quebradas Place               | So Paulo             |
+| TOM         | MIRANDA      | 1551 Rampur Lane                       | Changhwa             |
+| LUCILLE     | TRACY        | 602 Paarl Street                       | Pavlodar             |
+| NULL        | NULL         | 1692 Ede Loop                          | So Paulo             |
+| NULL        | NULL         | 936 Salzburg Lane                      | Uttar Pradesh        |
+| NULL        | NULL         | 586 Tete Way                           | Kanagawa             |
+| NULL        | NULL         | 1888 Kabul Drive                       | Oyo & Osun           |
+| NULL        | NULL         | 320 Baiyin Parkway                     | Mahajanga            |
+| MILLA       | PECK         | 927 Baha Blanca Parkway                | Krim                 |
+| NULL        | NULL         | 929 Tallahassee Loop                   | Gauteng              |
+| NULL        | NULL         | 125 Citt del Vaticano Boulevard        | Puebla               |
+| NULL        | NULL         | 1557 Ktahya Boulevard                  | England              |
+| NULL        | NULL         | 870 Ashqelon Loop                      | Songkhla             |
+| NULL        | NULL         | 1740 Portoviejo Avenue                 | Sucre                |
+| NULL        | NULL         | 1942 Ciparay Parkway                   | Cheju                |
+| NULL        | NULL         | 1926 El Alto Avenue                    | Buenos Aires         |
+| NULL        | NULL         | 1952 Chatsworth Drive                  | Guangdong            |
+| NULL        | NULL         | 1370 Le Mans Avenue                    | Brunei and Muara     |
+| NULL        | NULL         | 984 Effon-Alaiye Avenue                | Gois                 |
+| NICK        | STALLONE     | 832 Nakhon Sawan Manor                 | Inner Mongolia       |
+| NULL        | NULL         | 152 Kitwe Parkway                      | Caraga               |
+| KIRSTEN     | PALTROW      | 1697 Tanauan Lane                      | Punjab               |
+| REESE       | KILMER       | 1308 Arecibo Way                       | Georgia              |
+| MICHAEL     | BOLGER       | 1599 Plock Drive                       | Tete                 |
+| NULL        | NULL         | 669 Firozabad Loop                     | Abu Dhabi            |
+| ANGELA      | HUDSON       | 588 Vila Velha Manor                   | Kyongsangbuk         |
+| JULIA       | BARRYMORE    | 1913 Kamakura Place                    | Lipetsk              |
+| NULL        | NULL         | 733 Mandaluyong Place                  | Asir                 |
+| NULL        | NULL         | 659 Vaduz Drive                        | Ha Darom             |
+| NULL        | NULL         | 1177 Jelets Way                        | Kwara & Kogi         |
+| FRANCES     | DAY-LEWIS    | 1386 Yangor Avenue                     | Provence-Alpes-Cte   |
+| NULL        | NULL         | 454 Nakhon Sawan Boulevard             | Funafuti             |
+| UMA         | WOOD         | 1867 San Juan Bautista Tuxtepec Avenue | Ivanovo              |
+| MORGAN      | HOPKINS      | 1532 Dzerzinsk Way                     | Buenos Aires         |
+| GROUCHO     | SINATRA      | 1002 Ahmadnagar Manor                  | Mxico                |
+| MAE         | HOFFMAN      | 682 Junan Way                          | North West           |
+| ANGELINA    | ASTAIRE      | 804 Elista Drive                       | Hubei                |
+| NULL        | NULL         | 1378 Alvorada Avenue                   | Distrito Federal     |
+| CHRIS       | BRIDGES      | 793 Cam Ranh Avenue                    | California           |
+| GREG        | CHAPLIN      | 1079 Tel Aviv-Jaffa Boulevard          | Sucre                |
+| CHRISTOPHER | BERRY        | 442 Rae Bareli Place                   | Nordrhein-Westfalen  |
+| DUSTIN      | TAUTOU       | 1107 Nakhon Sawan Avenue               | Mxico                |
+| NULL        | NULL         | 544 Malm Parkway                       | Central Java         |
+| CHRISTIAN   | AKROYD       | 1967 Sincelejo Place                   | Gujarat              |
+| RUSSELL     | BACALL       | 333 Goinia Way                         | Texas                |
+| SCARLETT    | DAMON        | 1987 Coacalco de Berriozbal Loop       | al-Qalyubiya         |
+| JUDE        | CRUISE       | 241 Mosul Lane                         | Risaralda            |
+| BOB         | FAWCETT      | 211 Chiayi Drive                       | Uttar Pradesh        |
+| NULL        | NULL         | 1175 Tanauan Way                       | Lima                 |
+| NULL        | NULL         | 117 Boa Vista Way                      | Uttar Pradesh        |
+| ANNE        | CRONYN       | 848 Tafuna Manor                       | Ktahya               |
+| NULL        | NULL         | 569 Baicheng Lane                      | Gauteng              |
+| NULL        | NULL         | 1666 Qomsheh Drive                     | So Paulo             |
+| WOODY       | JOLIE        | 801 Hagonoy Drive                      | Smolensk             |
+| RALPH       | CRUZ         | 1050 Garden Grove Avenue               | Slaskie              |
+| CAMERON     | ZELLWEGER    | 1854 Tieli Street                      | Shandong             |
+| NULL        | NULL         | 758 Junan Lane                         | Gois                 |
+| CAMERON     | WRAY         | 1752 So Leopoldo Parkway               | Taka-Karpatia        |
+| ALBERT      | JOHANSSON    | 898 Belm Manor                         | Free State           |
+| MATTHEW     | LEIGH        | 261 Saint Louis Way                    | Coahuila de Zaragoza |
+| JAMES       | PITT         | 765 Southampton Drive                  | al-Qalyubiya         |
+| NULL        | NULL         | 943 Johannesburg Avenue                | Maharashtra          |
+| NULL        | NULL         | 788 Atinsk Street                      | Karnataka            |
+| BURT        | POSEY        | 1749 Daxian Place                      | Gelderland           |
+| SPENCER     | DEPP         | 1587 Sullana Lane                      | Inner Mongolia       |
+| KENNETH     | TORN         | 1029 Dzerzinsk Manor                   | Ynlin                |
+| DARYL       | WAHLBERG     | 1666 Beni-Mellal Place                 | Tennessee            |
+| NULL        | NULL         | 928 Jaffna Loop                        | Hiroshima            |
+| NULL        | NULL         | 483 Ljubertsy Parkway                  | Scotland             |
+| NULL        | NULL         | 374 Bat Yam Boulevard                  | Kilis                |
+| RIP         | WINSLET      | 1027 Songkhla Manor                    | Minsk                |
+| NULL        | NULL         | 999 Sanaa Loop                         | Gauteng              |
+| NULL        | NULL         | 879 Newcastle Way                      | Michigan             |
+| NULL        | NULL         | 1337 Lincoln Parkway                   | Saitama              |
+| NULL        | NULL         | 1952 Pune Lane                         | Saint-Denis          |
+| RAY         | JOHANSSON    | 782 Mosul Street                       | Massachusetts        |
+| MENA        | TEMPLE       | 781 Shimonoseki Drive                  | Michoacn de Ocampo   |
+| NULL        | NULL         | 1560 Jelets Boulevard                  | Shandong             |
+| NULL        | NULL         | 1963 Moscow Place                      | Assam                |
+| MILLA       | KEITEL       | 456 Escobar Way                        | Jakarta Raya         |
+| CARMEN      | HUNT         | 798 Cianjur Avenue                     | Shanxi               |
+| NULL        | NULL         | 185 Novi Sad Place                     | Bern                 |
+| NULL        | NULL         | 1367 Yantai Manor                      | Ondo & Ekiti         |
+| JIM         | MOSTEL       | 1386 Nakhon Sawan Boulevard            | Pyongyang-si         |
+| NULL        | NULL         | 369 Papeete Way                        | North Carolina       |
+| NULL        | NULL         | 1440 Compton Place                     | North Austria        |
+| NULL        | NULL         | 1623 Baha Blanca Manor                 | Moskova              |
+| NULL        | NULL         | 97 Shimoga Avenue                      | Tel Aviv             |
+| NULL        | NULL         | 1740 Le Mans Loop                      | Pays de la Loire     |
+| NULL        | NULL         | 1287 Xiangfan Boulevard                | Gifu                 |
+| PENELOPE    | CRONYN       | 842 Salzburg Lane                      | Adana                |
+| GINA        | DEGENERES    | 154 Tallahassee Loop                   | Xinxiang             |
+| NULL        | NULL         | 710 San Felipe del Progreso Avenue     | Lilongwe             |
+| MINNIE      | ZELLWEGER    | 1540 Wroclaw Drive                     | Maharashtra          |
+| NULL        | NULL         | 475 Atinsk Way                         | Gansu                |
+| WALTER      | TORN         | 1294 Firozabad Drive                   | Jiangxi              |
+| NULL        | NULL         | 1877 Ezhou Lane                        | Rajasthan            |
+| GARY        | PENN         | 316 Uruapan Street                     | Perak                |
+| NULL        | NULL         | 29 Pyongyang Loop                      | Batman               |
+| SYLVESTER   | DERN         | 1010 Klerksdorp Way                    | Steiermark           |
+| MEG         | HAWKE        | 1848 Salala Boulevard                  | Miranda              |
+| NULL        | NULL         | 431 Xiangtan Avenue                    | Kerala               |
+| NULL        | NULL         | 757 Rustenburg Avenue                  | Skikda               |
+| KIRSTEN     | AKROYD       | 146 Johannesburg Way                   | Tamaulipas           |
+| NULL        | NULL         | 1891 Rizhao Boulevard                  | So Paulo             |
+| BEN         | WILLIS       | 1089 Iwatsuki Avenue                   | Kirov                |
+| KENNETH     | PALTROW      | 1410 Benin City Parkway                | Risaralda            |
+| CHRISTIAN   | NEESON       | 682 Garden Grove Place                 | Tennessee            |
+| SIDNEY      | CROWE        | 533 al-Ayn Boulevard                   | California           |
+| GENE        | WILLIS       | 1839 Szkesfehrvr Parkway               | Gois                 |
+| SUSAN       | DAVIS        | 741 Ambattur Manor                     | Noord-Brabant        |
+| NULL        | NULL         | 927 Barcelona Street                   | Chaharmahal va Bakht |
+| NULL        | NULL         | 435 0 Way                              | West Bengali         |
+| HENRY       | BERRY        | 140 Chiayi Parkway                     | Sumy                 |
+| NULL        | NULL         | 1166 Changhwa Street                   | Caraga               |
+| NULL        | NULL         | 891 Novi Sad Manor                     | Ontario              |
+| NULL        | NULL         | 605 Rio Claro Parkway                  | Tabora               |
+| NULL        | NULL         | 1077 San Felipe de Puerto Plata Place  | Rostov-na-Donu       |
+| NULL        | NULL         | 9 San Miguel de Tucumn Manor           | Uttar Pradesh        |
+| GROUCHO     | DUNST        | 447 Surakarta Loop                     | Nyanza               |
+| NULL        | NULL         | 345 Oshawa Boulevard                   | Tokyo-to             |
+| PENELOPE    | PINKETT      | 1792 Valle de la Pascua Place          | Nordrhein-Westfalen  |
+| GARY        | PHOENIX      | 1074 Binzhou Manor                     | Baden-Wrttemberg     |
+| SEAN        | GUINESS      | 817 Bradford Loop                      | Jiangsu              |
+| NULL        | NULL         | 955 Bamenda Way                        | Ondo & Ekiti         |
+| NULL        | NULL         | 1149 A Corua (La Corua) Boulevard      | Haiphong             |
+| GRETA       | KEITEL       | 387 Mwene-Ditu Drive                   | Ahal                 |
+| NULL        | NULL         | 68 Molodetno Manor                     | Nordrhein-Westfalen  |
+| NULL        | NULL         | 642 Nador Drive                        | Maharashtra          |
+| NULL        | NULL         | 1688 Nador Lane                        | Sulawesi Utara       |
+| DARYL       | CRAWFORD     | 1215 Pyongyang Parkway                 | Usak                 |
+| EMILY       | DEE          | 1679 Antofagasta Street                | Alto Paran           |
+| CATE        | HARRIS       | 1304 s-Hertogenbosch Way               | Santa Catarina       |
+| MORGAN      | MCDORMAND    | 850 Salala Loop                        | Kitaa                |
+| NULL        | NULL         | 624 Oshawa Boulevard                   | West Bengali         |
+| KENNETH     | PESCI        | 43 Dadu Avenue                         | Rajasthan            |
+| JANE        | JACKMAN      | 751 Lima Loop                          | Aden                 |
+| NULL        | NULL         | 1333 Haldia Street                     | Jilin                |
+| CHARLIZE    | DENCH        | 660 Jedda Boulevard                    | Washington           |
+| MARY        | TANDY        | 1001 Miyakonojo Lane                   | Taizz                |
+| FRANCES     | TOMEI        | 226 Brest Manor                        | California           |
+| ELLEN       | PRESLEY      | 1229 Valencia Parkway                  | Haskovo              |
+| FAY         | WINSLET      | 1201 Qomsheh Manor                     | Gois                 |
+| NULL        | NULL         | 866 Shivapuri Manor                    | Uttar Pradesh        |
+| RICHARD     | PENN         | 1168 Najafabad Parkway                 | Kabol                |
+| NULL        | NULL         | 1244 Allappuzha (Alleppey) Place       | Buenos Aires         |
+| ADAM        | HOPPER       | 1842 Luzinia Boulevard                 | Zanzibar West        |
+| EWAN        | GOODING      | 1926 Gingoog Street                    | Sisilia              |
+| NULL        | NULL         | 810 Palghat (Palakkad) Boulevard       | Jaroslavl            |
+| NULL        | NULL         | 1820 Maring Parkway                    | Punjab               |
+| NULL        | NULL         | 60 Poos de Caldas Street               | Rajasthan            |
+| NULL        | NULL         | 1014 Loja Manor                        | Tamil Nadu           |
+| NULL        | NULL         | 201 Effon-Alaiye Way                   | Asuncin              |
+| LUCILLE     | DEE          | 430 Alessandria Loop                   | Saarland             |
+| NULL        | NULL         | 754 Valencia Place                     | Phnom Penh           |
+| HARRISON    | BALE         | 356 Olomouc Manor                      | Gois                 |
+| WHOOPI      | HURT         | 1256 Bislig Boulevard                  | Botosani             |
+| SPENCER     | PECK         | 954 Kimchon Place                      | West Bengali         |
+| JADA        | RYDER        | 885 Yingkou Manor                      | Kaduna               |
+| CUBA        | ALLEN        | 1736 Cavite Place                      | Qina                 |
+| CATE        | MCQUEEN      | 346 Skikda Parkway                     | Hawalli              |
+| BURT        | TEMPLE       | 98 Stara Zagora Boulevard              | Valle                |
+| MERYL       | ALLEN        | 1479 Rustenburg Boulevard              | Southern Tagalog     |
+| JULIANNE    | DENCH        | 647 A Corua (La Corua) Street          | Chollanam            |
+| SUSAN       | DAVIS        | 1964 Gijn Manor                        | Karnataka            |
+| SCARLETT    | BENING       | 47 Syktyvkar Lane                      | West Java            |
+| NULL        | NULL         | 1148 Saarbrcken Parkway                | Fukushima            |
+| MORGAN      | WILLIAMS     | 1103 Bilbays Parkway                   | Hubei                |
+| NULL        | NULL         | 1246 Boksburg Parkway                  | Hebei                |
+| NULL        | NULL         | 1483 Pathankot Street                  | Tucumn               |
+| NULL        | NULL         | 582 Papeete Loop                       | Central Visayas      |
+| NULL        | NULL         | 300 Junan Street                       | Kyonggi              |
+| RITA        | REYNOLDS     | 829 Grand Prairie Way                  | Paran                |
+| GENE        | HOPKINS      | 1473 Changhwa Parkway                  | Mxico                |
+| SEAN        | WILLIAMS     | 1309 Weifang Street                    | Florida              |
+| NULL        | NULL         | 1760 Oshawa Manor                      | Tianjin              |
+| NULL        | NULL         | 786 Stara Zagora Way                   | Oyo & Osun           |
+| NULL        | NULL         | 1966 Tonghae Street                    | Anhalt Sachsen       |
+| ED          | MANSFIELD    | 1497 Yuzhou Drive                      | England              |
+| ADAM        | GRANT        | 752 Ondo Loop                          | Miyazaki             |
+| NULL        | NULL         | 1338 Zalantun Lane                     | Minas Gerais         |
+| MARY        | KEITEL       | 127 Iwakuni Boulevard                  | Central Luzon        |
+| NULL        | NULL         | 51 Laredo Avenue                       | Sagaing              |
+| NULL        | NULL         | 771 Yaound Manor                       | Sofala               |
+| AUDREY      | BAILEY       | 532 Toulon Street                      | Santiago             |
+| KIM         | ALLEN        | 1027 Banjul Place                      | West Bengali         |
+| MICHELLE    | MCCONAUGHEY  | 1158 Mandi Bahauddin Parkway           | Shanxi               |
+| NULL        | NULL         | 862 Xintai Lane                        | Cagayan Valley       |
+| NULL        | NULL         | 816 Cayenne Parkway                    | Manab                |
+| SALMA       | NOLTE        | 1831 Nam Dinh Loop                     | National Capital Reg |
+| WARREN      | JACKMAN      | 446 Kirovo-Tepetsk Lane                | Osaka                |
+| NULL        | NULL         | 682 Halisahar Place                    | Severn Morava        |
+| NULL        | NULL         | 1587 Loja Manor                        | Salzburg             |
+| NULL        | NULL         | 1762 Paarl Parkway                     | Hunan                |
+| NULL        | NULL         | 1519 Ilorin Place                      | Kerala               |
+| NULL        | NULL         | 920 Kumbakonam Loop                    | California           |
+| NULL        | NULL         | 906 Goinia Way                         | Wielkopolskie        |
+| NULL        | NULL         | 1675 Xiangfan Manor                    | Tamil Nadu           |
+| RENEE       | TRACY        | 85 San Felipe de Puerto Plata Drive    | Shandong             |
+| NULL        | NULL         | 144 South Hill Loop                    | Guanajuato           |
+| NULL        | NULL         | 1884 Shikarpur Avenue                  | Haryana              |
+| NULL        | NULL         | 1980 Kamjanets-Podilskyi Street        | Illinois             |
+| ALBERT      | NOLTE        | 1944 Bamenda Way                       | Michigan             |
+| NULL        | NULL         | 556 Baybay Manor                       | Oyo & Osun           |
+| KEVIN       | GARLAND      | 457 Tongliao Loop                      | Bursa                |
+| NULL        | NULL         | 600 Bradford Street                    | East Azerbaidzan     |
+| NULL        | NULL         | 1006 Santa Brbara dOeste Manor         | Ondo & Ekiti         |
+| LIZA        | BERGMAN      | 1308 Sumy Loop                         | Fujian               |
+| NULL        | NULL         | 1405 Chisinau Place                    | Ponce                |
+| DAN         | STREEP       | 226 Halifax Street                     | Xinxiang             |
+| NULL        | NULL         | 1279 Udine Parkway                     | Edo & Delta          |
+| NULL        | NULL         | 1336 Benin City Drive                  | Shiga                |
+| NULL        | NULL         | 1155 Liaocheng Place                   | Oyo & Osun           |
+| NULL        | NULL         | 1993 Tabuk Lane                        | Tamil Nadu           |
+| NULL        | NULL         | 86 Higashiosaka Lane                   | Guanajuato           |
+| NULL        | NULL         | 1912 Allende Manor                     | Kowloon and New Kowl |
+| NULL        | NULL         | 544 Tarsus Boulevard                   | Gurico               |
+| NULL        | NULL         | 1936 Cuman Avenue                      | Virginia             |
+| PENELOPE    | MONROE       | 1192 Tongliao Street                   | Sharja               |
+| NULL        | NULL         | 44 Najafabad Way                       | Baskimaa             |
+| NULL        | NULL         | 32 Pudukkottai Lane                    | Ohio                 |
+| JON         | CHASE        | 661 Chisinau Lane                      | Pietari              |
+| JULIA       | ZELLWEGER    | 951 Stara Zagora Manor                 | Punjab               |
+| NULL        | NULL         | 922 Vila Velha Loop                    | Maharashtra          |
+| KENNETH     | HOFFMAN      | 898 Jining Lane                        | Pohjois-Pohjanmaa    |
+| FAY         | WOOD         | 1635 Kuwana Boulevard                  | Hiroshima            |
+| GENE        | MCKELLEN     | 41 El Alto Parkway                     | Maharashtra          |
+| NULL        | NULL         | 1883 Maikop Lane                       | Kaliningrad          |
+| RENEE       | BALL         | 1908 Gaziantep Place                   | Liaoning             |
+| JEFF        | SILVERSTONE  | 687 Alessandria Parkway                | Sanaa                |
+| NULL        | NULL         | 827 Yuncheng Drive                     | Callao               |
+| NICK        | DEGENERES    | 913 Coacalco de Berriozbal Loop        | Texas                |
+| BEN         | HARRIS       | 715 So Bernardo do Campo Lane          | Kedah                |
+| HUMPHREY    | GARLAND      | 1354 Siegen Street                     | Rio de Janeiro       |
+| RUSSELL     | TEMPLE       | 1191 Sungai Petani Boulevard           | Missouri             |
+| LAURENCE    | BULLOCK      | 1224 Huejutla de Reyes Boulevard       | Lombardia            |
+| CARY        | MCCONAUGHEY  | 543 Bergamo Avenue                     | Minas Gerais         |
+| NULL        | NULL         | 746 Joliet Lane                        | Kursk                |
+| MENA        | HOPPER       | 780 Kimberley Way                      | Tabuk                |
+| NULL        | NULL         | 1774 Yaound Place                      | Hubei                |
+| DEBBIE      | AKROYD       | 1957 Yantai Lane                       | So Paulo             |
+| NULL        | NULL         | 1542 Lubumbashi Boulevard              | Tel Aviv             |
+| RUSSELL     | CLOSE        | 651 Pathankot Loop                     | Maharashtra          |
+| NULL        | NULL         | 1359 Zhoushan Parkway                  | Streymoyar           |
+| NULL        | NULL         | 1769 Iwaki Lane                        | Kujawsko-Pomorskie   |
+| IAN         | TANDY        | 1145 Vilnius Manor                     | Mxico                |
+| GEOFFREY    | HESTON       | 1892 Nabereznyje Telny Lane            | Tutuila              |
+| NULL        | NULL         | 470 Boksburg Street                    | Central              |
+| DAN         | HARRIS       | 1427 A Corua (La Corua) Place          | Buenos Aires         |
+| NULL        | NULL         | 479 San Felipe del Progreso Avenue     | Morelos              |
+| NULL        | NULL         | 867 Benin City Avenue                  | Henan                |
+| NULL        | NULL         | 981 Kumbakonam Place                   | Distrito Federal     |
+| NULL        | NULL         | 1016 Iwakuni Street                    | St George            |
+| NULL        | NULL         | 663 Baha Blanca Parkway                | Adana                |
+| WILL        | WILSON       | 1860 Taguig Loop                       | West Java            |
+| NULL        | NULL         | 1816 Bydgoszcz Loop                    | Dhaka                |
+| NULL        | NULL         | 587 Benguela Manor                     | Illinois             |
+| MINNIE      | KILMER       | 430 Kumbakonam Drive                   | Santa F              |
+| MERYL       | GIBSON       | 1838 Tabriz Lane                       | Dhaka                |
+| NULL        | NULL         | 431 Szkesfehrvr Avenue                 | Baki                 |
+| GREGORY     | GOODING      | 503 Sogamoso Loop                      | Sumqayit             |
+| NULL        | NULL         | 507 Smolensk Loop                      | Sousse               |
+| CUBA        | BIRCH        | 1920 Weifang Avenue                    | Uttar Pradesh        |
+| NULL        | NULL         | 124 al-Manama Way                      | Hiroshima            |
+| NULL        | NULL         | 1443 Mardan Street                     | Western Cape         |
+| NULL        | NULL         | 1909 Benguela Lane                     | Henan                |
+| JAYNE       | NOLTE        | 68 Ponce Parkway                       | Hanoi                |
+| NULL        | NULL         | 1217 Konotop Avenue                    | Gelderland           |
+| JAYNE       | SILVERSTONE  | 1293 Nam Dinh Way                      | Roraima              |
+| NULL        | NULL         | 785 Vaduz Street                       | Baja California      |
+| NULL        | NULL         | 1516 Escobar Drive                     | Tongatapu            |
+| BELA        | WALKEN       | 1628 Nagareyama Lane                   | Central              |
+| JAYNE       | NEESON       | 1157 Nyeri Loop                        | Adygea               |
+| NULL        | NULL         | 1673 Tangail Drive                     | Daugavpils           |
+| ED          | GUINESS      | 381 Kabul Way                          | Taipei               |
+| NULL        | NULL         | 953 Hodeida Street                     | Southern Tagalog     |
+| GRETA       | MALDEN       | 469 Nakhon Sawan Street                | Tuvassia             |
+| NULL        | NULL         | 1378 Beira Loop                        | Krasnojarsk          |
+| OPRAH       | KILMER       | 1641 Changhwa Place                    | Nord-Ouest           |
+| GROUCHO     | WILLIAMS     | 1698 Southport Loop                    | Hidalgo              |
+| LISA        | MONROE       | 519 Nyeri Manor                        | So Paulo             |
+| REESE       | WEST         | 619 Hunuco Avenue                      | Shimane              |
+| JULIA       | FAWCETT      | 45 Aparecida de Goinia Place           | Madhya Pradesh       |
+| NULL        | NULL         | 482 Kowloon and New Kowloon Manor      | Bratislava           |
+| JOHN        | SUVARI       | 604 Bern Place                         | Jharkhand            |
+| NULL        | NULL         | 1623 Kingstown Drive                   | Buenos Aires         |
+| VIVIEN      | BASINGER     | 1009 Zanzibar Lane                     | Arecibo              |
+| LAURA       | BRODY        | 114 Jalib al-Shuyukh Manor             | Centre               |
+| NULL        | NULL         | 1163 London Parkway                    | Par                  |
+| MICHAEL     | BENING       | 1658 Jastrzebie-Zdrj Loop              | Central              |
+| ALAN        | DREYFUSS     | 817 Laredo Avenue                      | Jalisco              |
+| NULL        | NULL         | 1565 Tangail Manor                     | Okinawa              |
+| OLYMPIA     | PFEIFFER     | 1912 Emeishan Drive                    | Balikesir            |
+| ROCK        | DUKAKIS      | 230 Urawa Drive                        | Andhra Pradesh       |
+| NULL        | NULL         | 1922 Miraj Way                         | Esfahan              |
+| NULL        | NULL         | 433 Florencia Street                   | Chihuahua            |
+| HARVEY      | HOPE         | 1049 Matamoros Parkway                 | Karnataka            |
+| NULL        | NULL         | 1061 Ede Avenue                        | Southern Tagalog     |
+| CHRIS       | DEPP         | 154 Oshawa Manor                       | East Java            |
+| NULL        | NULL         | 1191 Tandil Drive                      | Southern Tagalog     |
+| NULL        | NULL         | 1133 Rizhao Avenue                     | Pernambuco           |
+| MATTHEW     | CARREY       | 1519 Santiago de los Caballeros Loop   | East Kasai           |
+| NULL        | NULL         | 1618 Olomouc Manor                     | Kurgan               |
+| NULL        | NULL         | 220 Hidalgo Drive                      | Kermanshah           |
+| NULL        | NULL         | 686 Donostia-San Sebastin Lane         | Guangdong            |
+| NULL        | NULL         | 97 Mogiljov Lane                       | Gujarat              |
+| NULL        | NULL         | 1642 Charlotte Amalie Drive            | Slaskie              |
+| AL          | GARLAND      | 1368 Maracabo Boulevard                |                      |
+| HUMPHREY    | WILLIS       | 401 Sucre Boulevard                    | New Hampshire        |
+| CHRISTOPHER | WEST         | 368 Hunuco Boulevard                   | Namibe               |
+| NULL        | NULL         | 500 Lincoln Parkway                    | Jiangsu              |
+| NULL        | NULL         | 102 Chapra Drive                       | Ibaragi              |
+| NULL        | NULL         | 1793 Meixian Place                     | Hmelnytskyi          |
+| NULL        | NULL         | 514 Ife Way                            | Shaba                |
+| NULL        | NULL         | 717 Changzhou Lane                     | Southern Tagalog     |
+| NULL        | NULL         | 753 Ilorin Avenue                      | Sichuan              |
+| NULL        | NULL         | 1337 Mit Ghamr Avenue                  | Nakhon Sawan         |
+| NULL        | NULL         | 767 Pyongyang Drive                    | Osaka                |
+| WILLIAM     | HACKMAN      | 614 Pak Kret Street                    | Addis Abeba          |
+| NULL        | NULL         | 954 Lapu-Lapu Way                      | Moskova              |
+| NULL        | NULL         | 331 Bydgoszcz Parkway                  | Asturia              |
+| NULL        | NULL         | 1152 Citrus Heights Manor              | al-Qadarif           |
+| THORA       | TEMPLE       | 168 Cianjur Manor                      | Saitama              |
+| NULL        | NULL         | 616 Hagonoy Avenue                     | Krasnojarsk          |
+| NULL        | NULL         | 1190 0 Place                           | Rio Grande do Sul    |
+| NULL        | NULL         | 734 Bchar Place                        | Punjab               |
+| NULL        | NULL         | 530 Lausanne Lane                      | Texas                |
+| NULL        | NULL         | 454 Patiala Lane                       | Fukushima            |
+| NULL        | NULL         | 1346 Mysore Drive                      | Bretagne             |
+| NULL        | NULL         | 990 Etawah Loop                        | Tamil Nadu           |
+| NULL        | NULL         | 1266 Laredo Parkway                    | Saitama              |
+| NULL        | NULL         | 88 Nagaon Manor                        | Buenos Aires         |
+| PARKER      | GOLDBERG     | 264 Bhimavaram Manor                   | St Thomas            |
+| NULL        | NULL         | 1639 Saarbrcken Drive                  | North West           |
+| NULL        | NULL         | 692 Amroha Drive                       | Northern             |
+| DAN         | TORN         | 1936 Lapu-Lapu Parkway                 | Bauchi & Gombe       |
+| NULL        | NULL         | 432 Garden Grove Street                | Ontario              |
+| NULL        | NULL         | 1445 Carmen Parkway                    | West Java            |
+| NULL        | NULL         | 791 Salinas Street                     | Punjab               |
+| NULL        | NULL         | 126 Acua Parkway                       | West Bengali         |
+| NULL        | NULL         | 397 Sunnyvale Avenue                   | Guanajuato           |
+| NULL        | NULL         | 992 Klerksdorp Loop                    | Utrecht              |
+| NULL        | NULL         | 966 Arecibo Loop                       | Sind                 |
+| NULL        | NULL         | 289 Santo Andr Manor                   | al-Sharqiya          |
+| NULL        | NULL         | 437 Chungho Drive                      | Puerto Plata         |
+| NULL        | NULL         | 1948 Bayugan Parkway                   | Bihar                |
+| NULL        | NULL         | 1866 al-Qatif Avenue                   | California           |
+| NULL        | NULL         | 1661 Abha Drive                        | Tamil Nadu           |
+| NULL        | NULL         | 1557 Cape Coral Parkway                | Hubei                |
+| NULL        | NULL         | 1727 Matamoros Place                   | Sawhaj               |
+| NULL        | NULL         | 1269 Botosani Manor                    | Guangdong            |
+| NULL        | NULL         | 355 Vitria de Santo Anto Way           | Oaxaca               |
+| NULL        | NULL         | 1596 Acua Parkway                      | Jharkhand            |
+| NULL        | NULL         | 259 Ipoh Drive                         | So Paulo             |
+| NULL        | NULL         | 1823 Hoshiarpur Lane                   | Komi                 |
+| NULL        | NULL         | 1404 Taguig Drive                      | Okayama              |
+| NULL        | NULL         | 740 Udaipur Lane                       | Nizni Novgorod       |
+| NULL        | NULL         | 287 Cuautla Boulevard                  | Chuquisaca           |
+| NULL        | NULL         | 1766 Almirante Brown Street            | KwaZulu-Natal        |
+| NULL        | NULL         | 596 Huixquilucan Place                 | Nampula              |
+| NULL        | NULL         | 1351 Aparecida de Goinia Parkway       | Northern Mindanao    |
+| NULL        | NULL         | 722 Bradford Lane                      | Shandong             |
+| NULL        | NULL         | 983 Santa F Way                        | British Colombia     |
+| NULL        | NULL         | 1245 Ibirit Way                        | La Romana            |
+| NULL        | NULL         | 1836 Korla Parkway                     | Copperbelt           |
+| NULL        | NULL         | 231 Kaliningrad Place                  | Lombardia            |
+| NULL        | NULL         | 495 Bhimavaram Lane                    | Maharashtra          |
+| NULL        | NULL         | 1924 Shimonoseki Drive                 | Batna                |
+| NULL        | NULL         | 105 Dzerzinsk Manor                    | Inner Mongolia       |
+| NULL        | NULL         | 614 Denizli Parkway                    | Rio Grande do Sul    |
+| NULL        | NULL         | 1289 Belm Boulevard                    | Tartumaa             |
+| NULL        | NULL         | 203 Tambaram Street                    | Buenos Aires         |
+| NULL        | NULL         | 1704 Tambaram Manor                    | West Bengali         |
+| NULL        | NULL         | 207 Cuernavaca Loop                    | Tatarstan            |
+| NULL        | NULL         | 319 Springs Loop                       | Baijeri              |
+| NULL        | NULL         | 956 Nam Dinh Manor                     | Kerman               |
+| NULL        | NULL         | 1947 Paarl Way                         | Central Java         |
+| NULL        | NULL         | 814 Simferopol Loop                    | Sinaloa              |
+| NULL        | NULL         | 535 Ahmadnagar Manor                   | Abu Dhabi            |
+| NULL        | NULL         | 138 Caracas Boulevard                  | Zulia                |
+| NULL        | NULL         | 251 Florencia Drive                    | Michoacn de Ocampo   |
+| NULL        | NULL         | 659 Gatineau Boulevard                 | La Paz               |
+| NULL        | NULL         | 1889 Valparai Way                      | Ziguinchor           |
+| NULL        | NULL         | 1485 Bratislava Place                  | Illinois             |
+| NULL        | NULL         | 935 Aden Boulevard                     | Central Java         |
+| NULL        | NULL         | 76 Kermanshah Manor                    | Esfahan              |
+| NULL        | NULL         | 734 Tanshui Avenue                     | Caquet               |
+| NULL        | NULL         | 118 Jaffna Loop                        | Northern Mindanao    |
+| NULL        | NULL         | 1621 Tongliao Avenue                   | Irkutsk              |
+| NULL        | NULL         | 1844 Usak Avenue                       | Nova Scotia          |
+| NULL        | NULL         | 1872 Toulon Loop                       | OHiggins             |
+| NULL        | NULL         | 1088 Ibirit Place                      | Jalisco              |
+| NULL        | NULL         | 1322 Mosul Parkway                     | Shandong             |
+| NULL        | NULL         | 1447 Chatsworth Place                  | Chihuahua            |
+| NULL        | NULL         | 1257 Guadalajara Street                | Karnataka            |
+| NULL        | NULL         | 1469 Plock Lane                        | Galicia              |
+| NULL        | NULL         | 434 Ourense (Orense) Manor             | Hodeida              |
+| NULL        | NULL         | 270 Tambaram Parkway                   | Gauteng              |
+| NULL        | NULL         | 1786 Salinas Place                     | Nam Ha               |
+| NULL        | NULL         | 1078 Stara Zagora Drive                | Aceh                 |
+| NULL        | NULL         | 1854 Okara Boulevard                   | Drenthe              |
+| NULL        | NULL         | 421 Yaound Street                      | Sumy                 |
+| NULL        | NULL         | 1153 Allende Way                       | Qubec                |
+| NULL        | NULL         | 808 Naala-Porto Parkway                | England              |
+| NULL        | NULL         | 632 Usolje-Sibirskoje Parkway          | Ha Darom             |
+| NULL        | NULL         | 98 Pyongyang Boulevard                 | Ohio                 |
+| NULL        | NULL         | 984 Novoterkassk Loop                  | Gaziantep            |
+| NULL        | NULL         | 64 Korla Street                        | Mwanza               |
+| NULL        | NULL         | 1785 So Bernardo do Campo Street       | Veracruz             |
+| NULL        | NULL         | 698 Jelets Boulevard                   | Denizli              |
+| NULL        | NULL         | 1297 Alvorada Parkway                  | Ningxia              |
+| NULL        | NULL         | 1909 Dayton Avenue                     | Guangdong            |
+| NULL        | NULL         | 1789 Saint-Denis Parkway               | Coahuila de Zaragoza |
+| NULL        | NULL         | 185 Mannheim Lane                      | Stavropol            |
+| NULL        | NULL         | 184 Mandaluyong Street                 | Baja California Sur  |
+| NULL        | NULL         | 591 Sungai Petani Drive                | Okayama              |
+| NULL        | NULL         | 656 Matamoros Drive                    | Boyac                |
+| NULL        | NULL         | 775 ostka Drive                        | al-Daqahliya         |
+| NULL        | NULL         | 1013 Tabuk Boulevard                   | West Bengali         |
+| NULL        | NULL         | 319 Plock Parkway                      | Istanbul             |
+| NULL        | NULL         | 1954 Kowloon and New Kowloon Way       | Chimborazo           |
+| NULL        | NULL         | 362 Rajkot Lane                        | Gansu                |
+| NULL        | NULL         | 1060 Tandil Lane                       | Shandong             |
+| NULL        | NULL         | 1515 Korla Way                         | England              |
+| NULL        | NULL         | 1416 San Juan Bautista Tuxtepec Avenue | Zufar                |
+| NULL        | NULL         | 1 Valle de Santiago Avenue             | Apulia               |
+| NULL        | NULL         | 519 Brescia Parkway                    | East Java            |
+| NULL        | NULL         | 414 Mandaluyong Street                 | Lubelskie            |
+| NULL        | NULL         | 1197 Sokoto Boulevard                  | West Bengali         |
+| NULL        | NULL         | 496 Celaya Drive                       | Nagano               |
+| NULL        | NULL         | 786 Matsue Way                         | Illinois             |
+| NULL        | NULL         | 48 Maracabo Place                      | Central Luzon        |
+| NULL        | NULL         | 1152 al-Qatif Lane                     | Kalimantan Barat     |
+| NULL        | NULL         | 1269 Ipoh Avenue                       | Eskisehir            |
+| NULL        | NULL         | 758 Korolev Parkway                    | Andhra Pradesh       |
+| NULL        | NULL         | 1747 Rustenburg Place                  | Bihar                |
+| NULL        | NULL         | 886 Tonghae Place                      | Volgograd            |
+| NULL        | NULL         | 1574 Goinia Boulevard                  | Heilongjiang         |
+| NULL        | NULL         | 548 Uruapan Street                     | Ontario              |
+| NULL        | NULL         | 962 Tama Loop                          |                      |
+| NULL        | NULL         | 1778 Gijn Manor                        | Hubei                |
+| NULL        | NULL         | 568 Dhule (Dhulia) Loop                | Coquimbo             |
+| NULL        | NULL         | 1768 Udine Loop                        | Battambang           |
+| NULL        | NULL         | 608 Birgunj Parkway                    | Taipei               |
+| NULL        | NULL         | 680 A Corua (La Corua) Manor           | Sivas                |
+| NULL        | NULL         | 1949 Sanya Street                      | Gumma                |
+| NULL        | NULL         | 617 Klerksdorp Place                   | Khanh Hoa            |
+| NULL        | NULL         | 1993 0 Loop                            | Liaoning             |
+| NULL        | NULL         | 1176 Southend-on-Sea Manor             | Southern Tagalog     |
+| NULL        | NULL         | 600 Purnea (Purnia) Avenue             | Nghe An              |
+| NULL        | NULL         | 1003 Qinhuangdao Street                | West Java            |
+| NULL        | NULL         | 1986 Sivas Place                       | Friuli-Venezia Giuli |
+| NULL        | NULL         | 1427 Tabuk Place                       | Florida              |
+| NULL        | NULL         | 556 Asuncin Way                        | Mogiljov             |
+| NULL        | NULL         | 486 Ondo Parkway                       | Benguela             |
+| NULL        | NULL         | 635 Brest Manor                        | Andhra Pradesh       |
+| NULL        | NULL         | 166 Jinchang Street                    | Buenos Aires         |
+| NULL        | NULL         | 958 Sagamihara Lane                    | Mie                  |
+| NULL        | NULL         | 1817 Livorno Way                       | Khanh Hoa            |
+| NULL        | NULL         | 1332 Gaziantep Lane                    | Shandong             |
+| NULL        | NULL         | 949 Allende Lane                       | Uttar Pradesh        |
+| NULL        | NULL         | 195 Ilorin Street                      | Chari-Baguirmi       |
+| NULL        | NULL         | 193 Bhusawal Place                     | Kang-won             |
+| NULL        | NULL         | 43 Vilnius Manor                       | Colorado             |
+| NULL        | NULL         | 183 Haiphong Street                    | Jilin                |
+| NULL        | NULL         | 163 Augusta-Richmond County Loop       | Carabobo             |
+| NULL        | NULL         | 191 Jos Azueta Parkway                 | Ruse                 |
+| NULL        | NULL         | 379 Lublin Parkway                     | Toscana              |
+| NULL        | NULL         | 1658 Cuman Loop                        | Sumatera Selatan     |
+| NULL        | NULL         | 454 Qinhuangdao Drive                  | Tadla-Azilal         |
+| NULL        | NULL         | 1715 Okayama Street                    | So Paulo             |
+| NULL        | NULL         | 182 Nukualofa Drive                    | Sumy                 |
+| NULL        | NULL         | 390 Wroclaw Way                        | Hainan               |
+| NULL        | NULL         | 1421 Quilmes Lane                      | Ishikawa             |
+| NULL        | NULL         | 947 Trshavn Place                      | Central Luzon        |
+| NULL        | NULL         | 1764 Jalib al-Shuyukh Parkway          | Galicia              |
+| NULL        | NULL         | 346 Cam Ranh Avenue                    | Zhejiang             |
+| NULL        | NULL         | 1407 Pachuca de Soto Place             | Rio Grande do Sul    |
+| NULL        | NULL         | 904 Clarksville Drive                  | Zhejiang             |
+| NULL        | NULL         | 1917 Kumbakonam Parkway                | Vojvodina            |
+| NULL        | NULL         | 1447 Imus Place                        | Gujarat              |
+| NULL        | NULL         | 1497 Fengshan Drive                    | KwaZulu-Natal        |
+| NULL        | NULL         | 869 Shikarpur Way                      | England              |
+| NULL        | NULL         | 1059 Yuncheng Avenue                   | Vilna                |
+| NULL        | NULL         | 505 Madiun Boulevard                   | Dolnoslaskie         |
+| NULL        | NULL         | 1741 Hoshiarpur Boulevard              | al-Sharqiya          |
+| NULL        | NULL         | 1229 Varanasi (Benares) Manor          | Buenos Aires         |
+| NULL        | NULL         | 1894 Boa Vista Way                     | Texas                |
+| NULL        | NULL         | 1342 Sharja Way                        | Sokoto & Kebbi & Zam |
+| NULL        | NULL         | 1342 Abha Boulevard                    | Bukarest             |
+| NULL        | NULL         | 415 Pune Avenue                        | Shandong             |
+| NULL        | NULL         | 1746 Faaa Way                          | Huanuco              |
+| NULL        | NULL         | 539 Hami Way                           | Tokat                |
+| NULL        | NULL         | 1407 Surakarta Manor                   | Moskova              |
+| NULL        | NULL         | 502 Mandi Bahauddin Parkway            | Anzotegui            |
+| NULL        | NULL         | 1052 Pathankot Avenue                  | Sichuan              |
+| NULL        | NULL         | 1351 Sousse Lane                       | Coahuila de Zaragoza |
+| NULL        | NULL         | 1501 Pangkal Pinang Avenue             | Mazowieckie          |
+| NULL        | NULL         | 1405 Hagonoy Avenue                    | Slaskie              |
+| NULL        | NULL         | 521 San Juan Bautista Tuxtepec Place   | Qaraghandy           |
+| NULL        | NULL         | 923 Tangail Boulevard                  | Tokyo-to             |
+| NULL        | NULL         | 186 Skikda Lane                        | Morelos              |
+| NULL        | NULL         | 1568 Celaya Parkway                    | Kaohsiung            |
+| NULL        | NULL         | 1489 Kakamigahara Lane                 | Taipei               |
+| NULL        | NULL         | 1819 Alessandria Loop                  | Campeche             |
+| NULL        | NULL         | 1208 Tama Loop                         | Ninawa               |
+| NULL        | NULL         | 951 Springs Lane                       | Central Mindanao     |
+| NULL        | NULL         | 760 Miyakonojo Drive                   | Guerrero             |
+| NULL        | NULL         | 966 Asuncin Way                        | Hidalgo              |
+| NULL        | NULL         | 1584 Ljubertsy Lane                    | England              |
+| NULL        | NULL         | 247 Jining Parkway                     | Banjul               |
+| NULL        | NULL         | 773 Dallas Manor                       | Buenos Aires         |
+| NULL        | NULL         | 1923 Stara Zagora Lane                 | Nantou               |
+| NULL        | NULL         | 1402 Zanzibar Boulevard                | Guanajuato           |
+| NULL        | NULL         | 1464 Kursk Parkway                     | Shandong             |
+| NULL        | NULL         | 1074 Sanaa Parkway                     | Loja                 |
+| NULL        | NULL         | 1759 Niznekamsk Avenue                 | al-Manama            |
+| NULL        | NULL         | 32 Liaocheng Way                       | Minas Gerais         |
+| NULL        | NULL         | 42 Fontana Avenue                      | Fejr                 |
+| NULL        | NULL         | 1895 Zhezqazghan Drive                 | California           |
+| NULL        | NULL         | 1837 Kaduna Parkway                    | Inner Mongolia       |
+| NULL        | NULL         | 844 Bucuresti Place                    | Liaoning             |
+| NULL        | NULL         | 1101 Bucuresti Boulevard               | West Greece          |
+| NULL        | NULL         | 1103 Quilmes Boulevard                 | Piura                |
+| NULL        | NULL         | 1331 Usak Boulevard                    | Vaud                 |
+| NULL        | NULL         | 1325 Fukuyama Street                   | Heilongjiang         |
++-------------+--------------+----------------------------------------+----------------------+
+603 rows in set (0.01 sec)
+
+mysql> select first_name, last_name , address , district from actor right outer join address on actor.address_id = address.address_id limit 10;
++------------+--------------+---------------------------------+------------+
+| first_name | last_name    | address                         | district   |
++------------+--------------+---------------------------------+------------+
+| PENELOPE   | GUINESS      | 47 MySakila Drive               | Alberta    |
+| ED         | CHASE        | 28 MySQL Boulevard              | QLD        |
+| JENNIFER   | DAVIS        | 23 Workhaven Lane               | Alberta    |
+| NICK       | WAHLBERG     | 1411 Lillydale Drive            | QLD        |
+| JOHNNY     | LOLLOBRIGIDA | 1913 Hanoi Way                  | Nagasaki   |
+| GRACE      | MOSTEL       | 1121 Loja Avenue                | California |
+| BETTE      | NICHOLSON    | 692 Joliet Street               | Attika     |
+| MATTHEW    | JOHANSSON    | 1566 Inegl Manor                | Mandalay   |
+| CHRISTIAN  | GABLE        | 53 Idfu Parkway                 | Nantou     |
+| JOE        | SWANK        | 1795 Santiago de Compostela Way | Texas      |
++------------+--------------+---------------------------------+------------+
+10 rows in set (0.00 sec)
+
+mysql> select first_name, last_name , address , district from actor left outer join address on actor.address_id = address.address_id limit 10;
++------------+--------------+---------------------------------+------------+
+| first_name | last_name    | address                         | district   |
++------------+--------------+---------------------------------+------------+
+| PENELOPE   | GUINESS      | 47 MySakila Drive               | Alberta    |
+| NICK       | WAHLBERG     | 1411 Lillydale Drive            | QLD        |
+| ED         | CHASE        | 28 MySQL Boulevard              | QLD        |
+| JENNIFER   | DAVIS        | 23 Workhaven Lane               | Alberta    |
+| JOHNNY     | LOLLOBRIGIDA | 1913 Hanoi Way                  | Nagasaki   |
+| BETTE      | NICHOLSON    | 692 Joliet Street               | Attika     |
+| GRACE      | MOSTEL       | 1121 Loja Avenue                | California |
+| MATTHEW    | JOHANSSON    | 1566 Inegl Manor                | Mandalay   |
+| JOE        | SWANK        | 1795 Santiago de Compostela Way | Texas      |
+| CHRISTIAN  | GABLE        | 53 Idfu Parkway                 | Nantou     |
++------------+--------------+---------------------------------+------------+
+10 rows in set (0.00 sec)
+
+mysql> select first_name, last_name , address , district from actor left outer join address on actor.address_id = address.address_id;
++-------------+--------------+----------------------------------------+----------------------+
+| first_name  | last_name    | address                                | district             |
++-------------+--------------+----------------------------------------+----------------------+
+| PENELOPE    | GUINESS      | 47 MySakila Drive                      | Alberta              |
+| NICK        | WAHLBERG     | 1411 Lillydale Drive                   | QLD                  |
+| ED          | CHASE        | 28 MySQL Boulevard                     | QLD                  |
+| JENNIFER    | DAVIS        | 23 Workhaven Lane                      | Alberta              |
+| JOHNNY      | LOLLOBRIGIDA | 1913 Hanoi Way                         | Nagasaki             |
+| BETTE       | NICHOLSON    | 692 Joliet Street                      | Attika               |
+| GRACE       | MOSTEL       | 1121 Loja Avenue                       | California           |
+| MATTHEW     | JOHANSSON    | 1566 Inegl Manor                       | Mandalay             |
+| JOE         | SWANK        | 1795 Santiago de Compostela Way        | Texas                |
+| CHRISTIAN   | GABLE        | 53 Idfu Parkway                        | Nantou               |
+| ZERO        | CAGE         | 900 Santiago de Compostela Parkway     | Central Serbia       |
+| KARL        | BERRY        | 613 Korolev Drive                      | Masqat               |
+| UMA         | WOOD         | 1867 San Juan Bautista Tuxtepec Avenue | Ivanovo              |
+| VIVIEN      | BERGEN       | 262 A Corua (La Corua) Parkway         | Dhaka                |
+| CUBA        | OLIVIER      | 334 Munger (Monghyr) Lane              | Markazi              |
+| FRED        | COSTNER      | 915 Ponce Place                        | Basel-Stadt          |
+| HELEN       | VOIGHT       | 1947 Poos de Caldas Boulevard          | Chiayi               |
+| DAN         | TORN         | 1936 Lapu-Lapu Parkway                 | Bauchi & Gombe       |
+| BOB         | FAWCETT      | 211 Chiayi Drive                       | Uttar Pradesh        |
+| LUCILLE     | TRACY        | 602 Paarl Street                       | Pavlodar             |
+| KIRSTEN     | PALTROW      | 1697 Tanauan Lane                      | Punjab               |
+| ELVIS       | MARX         | 671 Graz Street                        | Oriental             |
+| SANDRA      | KILMER       | 786 Aurora Avenue                      | Yamaguchi            |
+| CAMERON     | STREEP       | 1213 Ranchi Parkway                    | Karnataka            |
+| KEVIN       | BLOOM        | 1214 Hanoi Way                         | Nebraska             |
+| RIP         | CRAWFORD     | 1632 Bislig Avenue                     | Nonthaburi           |
+| JULIA       | MCQUEEN      | 1447 Imus Way                          | Tahiti               |
+| WOODY       | HOFFMAN      | 17 Kabul Boulevard                     | Chiba                |
+| ALEC        | WAYNE        | 1124 Buenaventura Drive                | Mekka                |
+| SANDRA      | PECK         | 492 Cam Ranh Street                    | Eastern Visayas      |
+| SISSY       | SOBIESKI     | 808 Bhopal Manor                       | Haryana              |
+| TIM         | HACKMAN      | 1966 Amroha Avenue                     | Sichuan              |
+| MILLA       | PECK         | 927 Baha Blanca Parkway                | Krim                 |
+| AUDREY      | OLIVIER      | 1206 Dos Quebradas Place               | So Paulo             |
+| JUDY        | DEAN         | 725 Isesaki Place                      | Mekka                |
+| BURT        | DUKAKIS      | 33 Gorontalo Way                       | West Bengali         |
+| VAL         | BOLGER       | 57 Arlington Manor                     | Madhya Pradesh       |
+| TOM         | MCKELLEN     | 1780 Hino Boulevard                    | Liepaja              |
+| GOLDIE      | BRODY        | 1717 Guadalajara Lane                  | Missouri             |
+| JOHNNY      | CAGE         | 943 Tokat Street                       | Vaduz                |
+| JODIE       | DEGENERES    | 269 Cam Ranh Parkway                   | Chisinau             |
+| TOM         | MIRANDA      | 1551 Rampur Lane                       | Changhwa             |
+| KIRK        | JOVOVICH     | 1688 Okara Way                         | Nothwest Border Prov |
+| NICK        | STALLONE     | 832 Nakhon Sawan Manor                 | Inner Mongolia       |
+| REESE       | KILMER       | 1308 Arecibo Way                       | Georgia              |
+| PARKER      | GOLDBERG     | 264 Bhimavaram Manor                   | St Thomas            |
+| JULIA       | BARRYMORE    | 1913 Kamakura Place                    | Lipetsk              |
+| FRANCES     | DAY-LEWIS    | 1386 Yangor Avenue                     | Provence-Alpes-Cte   |
+| ANNE        | CRONYN       | 848 Tafuna Manor                       | Ktahya               |
+| NATALIE     | HOPKINS      | 115 Hidalgo Parkway                    | Khartum              |
+| GARY        | PHOENIX      | 1074 Binzhou Manor                     | Baden-Wrttemberg     |
+| CARMEN      | HUNT         | 798 Cianjur Avenue                     | Shanxi               |
+| MENA        | TEMPLE       | 781 Shimonoseki Drive                  | Michoacn de Ocampo   |
+| PENELOPE    | PINKETT      | 1792 Valle de la Pascua Place          | Nordrhein-Westfalen  |
+| FAY         | KILMER       | 419 Iligan Lane                        | Madhya Pradesh       |
+| DAN         | HARRIS       | 1427 A Corua (La Corua) Place          | Buenos Aires         |
+| JUDE        | CRUISE       | 241 Mosul Lane                         | Risaralda            |
+| CHRISTIAN   | AKROYD       | 1967 Sincelejo Place                   | Gujarat              |
+| DUSTIN      | TAUTOU       | 1107 Nakhon Sawan Avenue               | Mxico                |
+| HENRY       | BERRY        | 140 Chiayi Parkway                     | Sumy                 |
+| CHRISTIAN   | NEESON       | 682 Garden Grove Place                 | Tennessee            |
+| JAYNE       | NEESON       | 1157 Nyeri Loop                        | Adygea               |
+| CAMERON     | WRAY         | 1752 So Leopoldo Parkway               | Taka-Karpatia        |
+| RAY         | JOHANSSON    | 782 Mosul Street                       | Massachusetts        |
+| ANGELA      | HUDSON       | 588 Vila Velha Manor                   | Kyongsangbuk         |
+| MARY        | TANDY        | 1001 Miyakonojo Lane                   | Taizz                |
+| JESSICA     | BAILEY       | 42 Brindisi Place                      | Yerevan              |
+| RIP         | WINSLET      | 1027 Songkhla Manor                    | Minsk                |
+| KENNETH     | PALTROW      | 1410 Benin City Parkway                | Risaralda            |
+| MICHELLE    | MCCONAUGHEY  | 1158 Mandi Bahauddin Parkway           | Shanxi               |
+| ADAM        | GRANT        | 752 Ondo Loop                          | Miyazaki             |
+| SEAN        | WILLIAMS     | 1309 Weifang Street                    | Florida              |
+| GARY        | PENN         | 316 Uruapan Street                     | Perak                |
+| MILLA       | KEITEL       | 456 Escobar Way                        | Jakarta Raya         |
+| BURT        | POSEY        | 1749 Daxian Place                      | Gelderland           |
+| ANGELINA    | ASTAIRE      | 804 Elista Drive                       | Hubei                |
+| CARY        | MCCONAUGHEY  | 543 Bergamo Avenue                     | Minas Gerais         |
+| GROUCHO     | SINATRA      | 1002 Ahmadnagar Manor                  | Mxico                |
+| MAE         | HOFFMAN      | 682 Junan Way                          | North West           |
+| RALPH       | CRUZ         | 1050 Garden Grove Avenue               | Slaskie              |
+| SCARLETT    | DAMON        | 1987 Coacalco de Berriozbal Loop       | al-Qalyubiya         |
+| WOODY       | JOLIE        | 801 Hagonoy Drive                      | Smolensk             |
+| BEN         | WILLIS       | 1089 Iwatsuki Avenue                   | Kirov                |
+| JAMES       | PITT         | 765 Southampton Drive                  | al-Qalyubiya         |
+| MINNIE      | ZELLWEGER    | 1540 Wroclaw Drive                     | Maharashtra          |
+| GREG        | CHAPLIN      | 1079 Tel Aviv-Jaffa Boulevard          | Sucre                |
+| SPENCER     | PECK         | 954 Kimchon Place                      | West Bengali         |
+| KENNETH     | PESCI        | 43 Dadu Avenue                         | Rajasthan            |
+| CHARLIZE    | DENCH        | 660 Jedda Boulevard                    | Washington           |
+| SEAN        | GUINESS      | 817 Bradford Loop                      | Jiangsu              |
+| CHRISTOPHER | BERRY        | 442 Rae Bareli Place                   | Nordrhein-Westfalen  |
+| KIRSTEN     | AKROYD       | 146 Johannesburg Way                   | Tamaulipas           |
+| ELLEN       | PRESLEY      | 1229 Valencia Parkway                  | Haskovo              |
+| KENNETH     | TORN         | 1029 Dzerzinsk Manor                   | Ynlin                |
+| DARYL       | WAHLBERG     | 1666 Beni-Mellal Place                 | Tennessee            |
+| GENE        | WILLIS       | 1839 Szkesfehrvr Parkway               | Gois                 |
+| MEG         | HAWKE        | 1848 Salala Boulevard                  | Miranda              |
+| CHRIS       | BRIDGES      | 793 Cam Ranh Avenue                    | California           |
+| JIM         | MOSTEL       | 1386 Nakhon Sawan Boulevard            | Pyongyang-si         |
+| SPENCER     | DEPP         | 1587 Sullana Lane                      | Inner Mongolia       |
+| SUSAN       | DAVIS        | 1964 Gijn Manor                        | Karnataka            |
+| WALTER      | TORN         | 1294 Firozabad Drive                   | Jiangxi              |
+| MATTHEW     | LEIGH        | 261 Saint Louis Way                    | Coahuila de Zaragoza |
+| PENELOPE    | CRONYN       | 842 Salzburg Lane                      | Adana                |
+| SIDNEY      | CROWE        | 533 al-Ayn Boulevard                   | California           |
+| GROUCHO     | DUNST        | 447 Surakarta Loop                     | Nyanza               |
+| GINA        | DEGENERES    | 154 Tallahassee Loop                   | Xinxiang             |
+| WARREN      | NOLTE        | 698 Otsu Street                        | Cayenne              |
+| SYLVESTER   | DERN         | 1010 Klerksdorp Way                    | Steiermark           |
+| SUSAN       | DAVIS        | 741 Ambattur Manor                     | Noord-Brabant        |
+| CAMERON     | ZELLWEGER    | 1854 Tieli Street                      | Shandong             |
+| RUSSELL     | BACALL       | 333 Goinia Way                         | Texas                |
+| MORGAN      | HOPKINS      | 1532 Dzerzinsk Way                     | Buenos Aires         |
+| MORGAN      | MCDORMAND    | 850 Salala Loop                        | Kitaa                |
+| HARRISON    | BALE         | 356 Olomouc Manor                      | Gois                 |
+| DAN         | STREEP       | 226 Halifax Street                     | Xinxiang             |
+| RENEE       | TRACY        | 85 San Felipe de Puerto Plata Drive    | Shandong             |
+| CUBA        | ALLEN        | 1736 Cavite Place                      | Qina                 |
+| WARREN      | JACKMAN      | 446 Kirovo-Tepetsk Lane                | Osaka                |
+| PENELOPE    | MONROE       | 1192 Tongliao Street                   | Sharja               |
+| LIZA        | BERGMAN      | 1308 Sumy Loop                         | Fujian               |
+| SALMA       | NOLTE        | 1831 Nam Dinh Loop                     | National Capital Reg |
+| JULIANNE    | DENCH        | 647 A Corua (La Corua) Street          | Chollanam            |
+| SCARLETT    | BENING       | 47 Syktyvkar Lane                      | West Java            |
+| ALBERT      | NOLTE        | 1944 Bamenda Way                       | Michigan             |
+| FRANCES     | TOMEI        | 226 Brest Manor                        | California           |
+| KEVIN       | GARLAND      | 457 Tongliao Loop                      | Bursa                |
+| CATE        | MCQUEEN      | 346 Skikda Parkway                     | Hawalli              |
+| DARYL       | CRAWFORD     | 1215 Pyongyang Parkway                 | Usak                 |
+| GRETA       | KEITEL       | 387 Mwene-Ditu Drive                   | Ahal                 |
+| JANE        | JACKMAN      | 751 Lima Loop                          | Aden                 |
+| ADAM        | HOPPER       | 1842 Luzinia Boulevard                 | Zanzibar West        |
+| RICHARD     | PENN         | 1168 Najafabad Parkway                 | Kabol                |
+| GENE        | HOPKINS      | 1473 Changhwa Parkway                  | Mxico                |
+| RITA        | REYNOLDS     | 829 Grand Prairie Way                  | Paran                |
+| ED          | MANSFIELD    | 1497 Yuzhou Drive                      | England              |
+| MORGAN      | WILLIAMS     | 1103 Bilbays Parkway                   | Hubei                |
+| LUCILLE     | DEE          | 430 Alessandria Loop                   | Saarland             |
+| EWAN        | GOODING      | 1926 Gingoog Street                    | Sisilia              |
+| WHOOPI      | HURT         | 1256 Bislig Boulevard                  | Botosani             |
+| CATE        | HARRIS       | 1304 s-Hertogenbosch Way               | Santa Catarina       |
+| JADA        | RYDER        | 885 Yingkou Manor                      | Kaduna               |
+| RIVER       | DEAN         | 176 Mandaluyong Place                  | Uttar Pradesh        |
+| ANGELA      | WITHERSPOON  | 81 Hodeida Way                         | Rajasthan            |
+| KIM         | ALLEN        | 1027 Banjul Place                      | West Bengali         |
+| ALBERT      | JOHANSSON    | 898 Belm Manor                         | Free State           |
+| FAY         | WINSLET      | 1201 Qomsheh Manor                     | Gois                 |
+| EMILY       | DEE          | 1679 Antofagasta Street                | Alto Paran           |
+| RUSSELL     | TEMPLE       | 1191 Sungai Petani Boulevard           | Missouri             |
+| JAYNE       | NOLTE        | 68 Ponce Parkway                       | Hanoi                |
+| GEOFFREY    | HESTON       | 1892 Nabereznyje Telny Lane            | Tutuila              |
+| BEN         | HARRIS       | 715 So Bernardo do Campo Lane          | Kedah                |
+| MINNIE      | KILMER       | 430 Kumbakonam Drive                   | Santa F              |
+| MERYL       | GIBSON       | 1838 Tabriz Lane                       | Dhaka                |
+| IAN         | TANDY        | 1145 Vilnius Manor                     | Mxico                |
+| FAY         | WOOD         | 1635 Kuwana Boulevard                  | Hiroshima            |
+| GRETA       | MALDEN       | 469 Nakhon Sawan Street                | Tuvassia             |
+| VIVIEN      | BASINGER     | 1009 Zanzibar Lane                     | Arecibo              |
+| LAURA       | BRODY        | 114 Jalib al-Shuyukh Manor             | Centre               |
+| CHRIS       | DEPP         | 154 Oshawa Manor                       | East Java            |
+| HARVEY      | HOPE         | 1049 Matamoros Parkway                 | Karnataka            |
+| OPRAH       | KILMER       | 1641 Changhwa Place                    | Nord-Ouest           |
+| CHRISTOPHER | WEST         | 368 Hunuco Boulevard                   | Namibe               |
+| HUMPHREY    | WILLIS       | 401 Sucre Boulevard                    | New Hampshire        |
+| AL          | GARLAND      | 1368 Maracabo Boulevard                |                      |
+| NICK        | DEGENERES    | 913 Coacalco de Berriozbal Loop        | Texas                |
+| LAURENCE    | BULLOCK      | 1224 Huejutla de Reyes Boulevard       | Lombardia            |
+| WILL        | WILSON       | 1860 Taguig Loop                       | West Java            |
+| KENNETH     | HOFFMAN      | 898 Jining Lane                        | Pohjois-Pohjanmaa    |
+| MENA        | HOPPER       | 780 Kimberley Way                      | Tabuk                |
+| OLYMPIA     | PFEIFFER     | 1912 Emeishan Drive                    | Balikesir            |
+| GROUCHO     | WILLIAMS     | 1698 Southport Loop                    | Hidalgo              |
+| ALAN        | DREYFUSS     | 817 Laredo Avenue                      | Jalisco              |
+| MICHAEL     | BENING       | 1658 Jastrzebie-Zdrj Loop              | Central              |
+| WILLIAM     | HACKMAN      | 614 Pak Kret Street                    | Addis Abeba          |
+| JON         | CHASE        | 661 Chisinau Lane                      | Pietari              |
+| GENE        | MCKELLEN     | 41 El Alto Parkway                     | Maharashtra          |
+| LISA        | MONROE       | 519 Nyeri Manor                        | So Paulo             |
+| ED          | GUINESS      | 381 Kabul Way                          | Taipei               |
+| JEFF        | SILVERSTONE  | 687 Alessandria Parkway                | Sanaa                |
+| MATTHEW     | CARREY       | 1519 Santiago de los Caballeros Loop   | East Kasai           |
+| DEBBIE      | AKROYD       | 1957 Yantai Lane                       | So Paulo             |
+| RUSSELL     | CLOSE        | 651 Pathankot Loop                     | Maharashtra          |
+| HUMPHREY    | GARLAND      | 1354 Siegen Street                     | Rio de Janeiro       |
+| MICHAEL     | BOLGER       | 1599 Plock Drive                       | Tete                 |
+| JULIA       | ZELLWEGER    | 951 Stara Zagora Manor                 | Punjab               |
+| RENEE       | BALL         | 1908 Gaziantep Place                   | Liaoning             |
+| ROCK        | DUKAKIS      | 230 Urawa Drive                        | Andhra Pradesh       |
+| CUBA        | BIRCH        | 1920 Weifang Avenue                    | Uttar Pradesh        |
+| AUDREY      | BAILEY       | 532 Toulon Street                      | Santiago             |
+| GREGORY     | GOODING      | 503 Sogamoso Loop                      | Sumqayit             |
+| JOHN        | SUVARI       | 604 Bern Place                         | Jharkhand            |
+| BURT        | TEMPLE       | 98 Stara Zagora Boulevard              | Valle                |
+| MERYL       | ALLEN        | 1479 Rustenburg Boulevard              | Southern Tagalog     |
+| JAYNE       | SILVERSTONE  | 1293 Nam Dinh Way                      | Roraima              |
+| BELA        | WALKEN       | 1628 Nagareyama Lane                   | Central              |
+| REESE       | WEST         | 619 Hunuco Avenue                      | Shimane              |
+| MARY        | KEITEL       | 127 Iwakuni Boulevard                  | Central Luzon        |
+| JULIA       | FAWCETT      | 45 Aparecida de Goinia Place           | Madhya Pradesh       |
+| THORA       | TEMPLE       | 168 Cianjur Manor                      | Saitama              |
++-------------+--------------+----------------------------------------+----------------------+
+200 rows in set (0.00 sec)
+
+mysql>
+mysql> desc films;
+ERROR 1146 (42S02): Table 'lco_films.films' doesn't exist
+mysql> desc film;
++----------------------+---------------------------------------------------------------------+------+-----+-------------------+-----------------------------------------------+
+| Field                | Type                                                                | Null | Key | Default           | Extra                                         |
++----------------------+---------------------------------------------------------------------+------+-----+-------------------+-----------------------------------------------+
+| film_id              | smallint unsigned                                                   | NO   | PRI | NULL              | auto_increment                                |
+| title                | varchar(128)                                                        | NO   | MUL | NULL              |                                               |
+| description          | text                                                                | YES  |     | NULL              |                                               |
+| release_year         | year                                                                | YES  |     | NULL              |                                               |
+| language_id          | tinyint unsigned                                                    | NO   | MUL | NULL              |                                               |
+| original_language_id | tinyint unsigned                                                    | YES  | MUL | NULL              |                                               |
+| rental_duration      | tinyint unsigned                                                    | NO   |     | 3                 |                                               |
+| rental_rate          | decimal(4,2)                                                        | NO   |     | 4.99              |                                               |
+| length               | smallint unsigned                                                   | YES  |     | NULL              |                                               |
+| replacement_cost     | decimal(5,2)                                                        | NO   |     | 19.99             |                                               |
+| rating               | enum('G','PG','PG-13','R','NC-17')                                  | YES  |     | G                 |                                               |
+| special_features     | set('Trailers','Commentaries','Deleted Scenes','Behind the Scenes') | YES  |     | NULL              |                                               |
+| last_update          | timestamp                                                           | NO   |     | CURRENT_TIMESTAMP | DEFAULT_GENERATED on update CURRENT_TIMESTAMP |
++----------------------+---------------------------------------------------------------------+------+-----+-------------------+-----------------------------------------------+
+13 rows in set (0.04 sec)
+
+mysql> show tables;
++---------------------+
+| Tables_in_lco_films |
++---------------------+
+| actor               |
+| address             |
+| category            |
+| city                |
+| country             |
+| film                |
+| film_actor          |
+| film_category       |
+| language            |
++---------------------+
+9 rows in set (0.00 sec)
+
+mysql> desc film_actor;
++-------------+-------------------+------+-----+-------------------+-----------------------------------------------+
+| Field       | Type              | Null | Key | Default           | Extra                                         |
++-------------+-------------------+------+-----+-------------------+-----------------------------------------------+
+| actor_id    | smallint unsigned | NO   | PRI | NULL              |                                               |
+| film_id     | smallint unsigned | NO   | PRI | NULL              |                                               |
+| last_update | timestamp         | NO   |     | CURRENT_TIMESTAMP | DEFAULT_GENERATED on update CURRENT_TIMESTAMP |
++-------------+-------------------+------+-----+-------------------+-----------------------------------------------+
+3 rows in set (0.00 sec)
+
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| lco_films          |
+| movies_database    |
+| movies_db_pw       |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+7 rows in set (0.03 sec)
+
+mysql> SELECT LCO_FILMS;
+ERROR 1054 (42S22): Unknown column 'LCO_FILMS' in 'field list'
+mysql> select lco_films
+    ->
+    -> ^C
+mysql> select lco_films;
+ERROR 1054 (42S22): Unknown column 'lco_films' in 'field list'
+mysql> use lco_films;
+Database changed
+mysql> select * from actors;
+ERROR 1146 (42S02): Table 'lco_films.actors' doesn't exist
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| lco_films          |
+| movies_database    |
+| movies_db_pw       |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+7 rows in set (0.00 sec)
+
+mysql> select * from lco_fils;
+ERROR 1146 (42S02): Table 'lco_films.lco_fils' doesn't exist
+mysql> show tables;
++---------------------+
+| Tables_in_lco_films |
++---------------------+
+| actor               |
+| address             |
+| category            |
+| city                |
+| country             |
+| film                |
+| film_actor          |
+| film_category       |
+| language            |
++---------------------+
+9 rows in set (0.01 sec)
+
+mysql> select * from actors;
+ERROR 1146 (42S02): Table 'lco_films.actors' doesn't exist
+mysql> select * from actors;
+ERROR 1146 (42S02): Table 'lco_films.actors' doesn't exist
+mysql>
+mysql> select * from actor;
++----------+-------------+--------------+------------+---------------------+
+| actor_id | first_name  | last_name    | address_id | last_update         |
++----------+-------------+--------------+------------+---------------------+
+|        1 | PENELOPE    | GUINESS      |          1 | 2020-07-30 12:37:51 |
+|        2 | NICK        | WAHLBERG     |          4 | 2020-07-30 12:37:51 |
+|        3 | ED          | CHASE        |          2 | 2020-07-30 12:37:51 |
+|        4 | JENNIFER    | DAVIS        |          3 | 2020-07-30 12:37:51 |
+|        5 | JOHNNY      | LOLLOBRIGIDA |          5 | 2020-07-30 12:37:51 |
+|        6 | BETTE       | NICHOLSON    |          7 | 2020-07-30 12:37:51 |
+|        7 | GRACE       | MOSTEL       |          6 | 2020-07-30 12:37:51 |
+|        8 | MATTHEW     | JOHANSSON    |          8 | 2020-07-30 12:37:51 |
+|        9 | JOE         | SWANK        |         10 | 2020-07-30 12:37:51 |
+|       10 | CHRISTIAN   | GABLE        |          9 | 2020-07-30 12:37:51 |
+|       11 | ZERO        | CAGE         |         11 | 2020-07-30 12:37:51 |
+|       12 | KARL        | BERRY        |         13 | 2020-07-30 12:37:51 |
+|       13 | UMA         | WOOD         |        110 | 2020-07-30 12:37:51 |
+|       14 | VIVIEN      | BERGEN       |         25 | 2020-07-30 12:37:51 |
+|       15 | CUBA        | OLIVIER      |         40 | 2020-07-30 12:37:51 |
+|       16 | FRED        | COSTNER      |         65 | 2020-07-30 12:37:51 |
+|       17 | HELEN       | VOIGHT       |         77 | 2020-07-30 12:37:51 |
+|       18 | DAN         | TORN         |        414 | 2020-07-30 12:37:51 |
+|       19 | BOB         | FAWCETT      |        125 | 2020-07-30 12:37:51 |
+|       20 | LUCILLE     | TRACY        |         80 | 2020-07-30 12:37:51 |
+|       21 | KIRSTEN     | PALTROW      |         99 | 2020-07-30 12:37:51 |
+|       22 | ELVIS       | MARX         |         44 | 2020-07-30 12:37:51 |
+|       23 | SANDRA      | KILMER       |         33 | 2020-07-30 12:39:05 |
+|       24 | CAMERON     | STREEP       |         63 | 2020-07-30 12:37:51 |
+|       25 | KEVIN       | BLOOM        |         67 | 2020-07-30 12:39:44 |
+|       26 | RIP         | CRAWFORD     |         46 | 2020-07-30 12:37:51 |
+|       27 | JULIA       | MCQUEEN      |         47 | 2020-07-30 12:37:51 |
+|       28 | WOODY       | HOFFMAN      |         57 | 2020-07-30 12:37:51 |
+|       29 | ALEC        | WAYNE        |         74 | 2020-07-30 12:37:51 |
+|       30 | SANDRA      | PECK         |         75 | 2020-07-30 12:37:51 |
+|       31 | SISSY       | SOBIESKI     |         16 | 2020-07-30 12:37:51 |
+|       32 | TIM         | HACKMAN      |         68 | 2020-07-30 12:37:51 |
+|       33 | MILLA       | PECK         |         86 | 2020-07-30 12:37:51 |
+|       34 | AUDREY      | OLIVIER      |         78 | 2020-07-30 12:37:51 |
+|       35 | JUDY        | DEAN         |         53 | 2020-07-30 12:37:51 |
+|       36 | BURT        | DUKAKIS      |         35 | 2020-07-30 12:37:51 |
+|       37 | VAL         | BOLGER       |         72 | 2020-07-30 12:37:51 |
+|       38 | TOM         | MCKELLEN     |         27 | 2020-07-30 12:37:51 |
+|       39 | GOLDIE      | BRODY        |         66 | 2020-07-30 12:37:51 |
+|       40 | JOHNNY      | CAGE         |         61 | 2020-07-30 12:37:51 |
+|       41 | JODIE       | DEGENERES    |         42 | 2020-07-30 12:37:51 |
+|       42 | TOM         | MIRANDA      |         79 | 2020-07-30 12:37:51 |
+|       43 | KIRK        | JOVOVICH     |         24 | 2020-07-30 12:37:51 |
+|       44 | NICK        | STALLONE     |         97 | 2020-07-30 12:37:51 |
+|       45 | REESE       | KILMER       |        100 | 2020-07-30 12:37:51 |
+|       46 | PARKER      | GOLDBERG     |        411 | 2020-07-30 12:40:25 |
+|       47 | JULIA       | BARRYMORE    |        104 | 2020-07-30 12:37:51 |
+|       48 | FRANCES     | DAY-LEWIS    |        108 | 2020-07-30 12:37:51 |
+|       49 | ANNE        | CRONYN       |        128 | 2020-07-30 12:37:51 |
+|       50 | NATALIE     | HOPKINS      |         54 | 2020-07-30 12:37:51 |
+|       51 | GARY        | PHOENIX      |        200 | 2020-07-30 12:37:51 |
+|       52 | CARMEN      | HUNT         |        158 | 2020-07-30 12:37:51 |
+|       53 | MENA        | TEMPLE       |        154 | 2020-07-30 12:37:51 |
+|       54 | PENELOPE    | PINKETT      |        199 | 2020-07-30 12:37:51 |
+|       55 | FAY         | KILMER       |         19 | 2020-07-30 12:37:51 |
+|       56 | DAN         | HARRIS       |        327 | 2020-07-30 12:37:51 |
+|       57 | JUDE        | CRUISE       |        124 | 2020-07-30 12:37:51 |
+|       58 | CHRISTIAN   | AKROYD       |        121 | 2020-07-30 12:37:51 |
+|       59 | DUSTIN      | TAUTOU       |        119 | 2020-07-30 12:37:51 |
+|       60 | HENRY       | BERRY        |        191 | 2020-07-30 12:37:51 |
+|       61 | CHRISTIAN   | NEESON       |        185 | 2020-07-30 12:37:51 |
+|       62 | JAYNE       | NEESON       |        351 | 2020-07-30 12:37:51 |
+|       63 | CAMERON     | WRAY         |        135 | 2020-07-30 12:37:51 |
+|       64 | RAY         | JOHANSSON    |        153 | 2020-07-30 12:37:51 |
+|       65 | ANGELA      | HUDSON       |        103 | 2020-07-30 12:37:51 |
+|       66 | MARY        | TANDY        |        217 | 2020-07-30 12:37:51 |
+|       67 | JESSICA     | BAILEY       |         45 | 2020-07-30 12:37:51 |
+|       68 | RIP         | WINSLET      |        148 | 2020-07-30 12:37:51 |
+|       69 | KENNETH     | PALTROW      |        184 | 2020-07-30 12:37:51 |
+|       70 | MICHELLE    | MCCONAUGHEY  |        265 | 2020-07-30 12:37:51 |
+|       71 | ADAM        | GRANT        |        258 | 2020-07-30 12:37:51 |
+|       72 | SEAN        | WILLIAMS     |        252 | 2020-07-30 14:09:58 |
+|       73 | GARY        | PENN         |        175 | 2020-07-30 12:37:51 |
+|       74 | MILLA       | KEITEL       |        157 | 2020-07-30 12:37:51 |
+|       75 | BURT        | POSEY        |        141 | 2020-07-30 12:37:51 |
+|       76 | ANGELINA    | ASTAIRE      |        114 | 2020-07-30 12:37:51 |
+|       77 | CARY        | MCCONAUGHEY  |        315 | 2020-07-30 12:37:51 |
+|       78 | GROUCHO     | SINATRA      |        112 | 2020-07-30 12:37:51 |
+|       79 | MAE         | HOFFMAN      |        113 | 2020-07-30 12:37:51 |
+|       80 | RALPH       | CRUZ         |        132 | 2020-07-30 12:37:51 |
+|       81 | SCARLETT    | DAMON        |        123 | 2020-07-30 12:37:51 |
+|       82 | WOODY       | JOLIE        |        131 | 2020-07-30 12:37:51 |
+|       83 | BEN         | WILLIS       |        183 | 2020-07-30 12:37:51 |
+|       84 | JAMES       | PITT         |        138 | 2020-07-30 12:37:51 |
+|       85 | MINNIE      | ZELLWEGER    |        171 | 2020-07-30 12:37:51 |
+|       86 | GREG        | CHAPLIN      |        117 | 2020-07-30 12:37:51 |
+|       87 | SPENCER     | PECK         |        235 | 2020-07-30 12:37:51 |
+|       88 | KENNETH     | PESCI        |        213 | 2020-07-30 12:37:51 |
+|       89 | CHARLIZE    | DENCH        |        216 | 2020-07-30 12:41:41 |
+|       90 | SEAN        | GUINESS      |        201 | 2020-07-30 12:37:51 |
+|       91 | CHRISTOPHER | BERRY        |        118 | 2020-07-30 12:37:51 |
+|       92 | KIRSTEN     | AKROYD       |        181 | 2020-07-30 12:37:51 |
+|       93 | ELLEN       | PRESLEY      |        219 | 2020-07-30 12:37:51 |
+|       94 | KENNETH     | TORN         |        143 | 2020-07-30 12:37:51 |
+|       95 | DARYL       | WAHLBERG     |        144 | 2020-07-30 12:37:51 |
+|       96 | GENE        | WILLIS       |        187 | 2020-07-30 12:37:51 |
+|       97 | MEG         | HAWKE        |        178 | 2020-07-30 12:37:51 |
+|       98 | CHRIS       | BRIDGES      |        116 | 2020-07-30 12:37:51 |
+|       99 | JIM         | MOSTEL       |        161 | 2020-07-30 12:37:51 |
+|      100 | SPENCER     | DEPP         |        142 | 2020-07-30 12:37:51 |
+|      101 | SUSAN       | DAVIS        |        242 | 2020-07-30 12:37:51 |
+|      102 | WALTER      | TORN         |        173 | 2020-07-30 12:37:51 |
+|      103 | MATTHEW     | LEIGH        |        137 | 2020-07-30 12:37:51 |
+|      104 | PENELOPE    | CRONYN       |        168 | 2020-07-30 12:37:51 |
+|      105 | SIDNEY      | CROWE        |        186 | 2020-07-30 12:37:51 |
+|      106 | GROUCHO     | DUNST        |        197 | 2020-07-30 12:37:51 |
+|      107 | GINA        | DEGENERES    |        169 | 2020-07-30 12:37:51 |
+|      108 | WARREN      | NOLTE        |         69 | 2020-07-30 12:37:51 |
+|      109 | SYLVESTER   | DERN         |        177 | 2020-07-30 12:37:51 |
+|      110 | SUSAN       | DAVIS        |        188 | 2020-07-30 12:37:51 |
+|      111 | CAMERON     | ZELLWEGER    |        133 | 2020-07-30 12:37:51 |
+|      112 | RUSSELL     | BACALL       |        122 | 2020-07-30 12:37:51 |
+|      113 | MORGAN      | HOPKINS      |        111 | 2020-07-30 12:37:51 |
+|      114 | MORGAN      | MCDORMAND    |        211 | 2020-07-30 12:37:51 |
+|      115 | HARRISON    | BALE         |        233 | 2020-07-30 12:37:51 |
+|      116 | DAN         | STREEP       |        288 | 2020-07-30 12:37:51 |
+|      117 | RENEE       | TRACY        |        277 | 2020-07-30 12:37:51 |
+|      118 | CUBA        | ALLEN        |        237 | 2020-07-30 12:37:51 |
+|      119 | WARREN      | JACKMAN      |        269 | 2020-07-30 12:37:51 |
+|      120 | PENELOPE    | MONROE       |        297 | 2020-07-30 12:37:51 |
+|      121 | LIZA        | BERGMAN      |        286 | 2020-07-30 12:37:51 |
+|      122 | SALMA       | NOLTE        |        268 | 2020-07-30 12:37:51 |
+|      123 | JULIANNE    | DENCH        |        241 | 2020-07-30 12:37:51 |
+|      124 | SCARLETT    | BENING       |        243 | 2020-07-30 12:37:51 |
+|      125 | ALBERT      | NOLTE        |        281 | 2020-07-30 12:37:51 |
+|      126 | FRANCES     | TOMEI        |        218 | 2020-07-30 12:37:51 |
+|      127 | KEVIN       | GARLAND      |        283 | 2020-07-30 12:37:51 |
+|      128 | CATE        | MCQUEEN      |        238 | 2020-07-30 12:37:51 |
+|      129 | DARYL       | CRAWFORD     |        208 | 2020-07-30 12:37:51 |
+|      130 | GRETA       | KEITEL       |        204 | 2020-07-30 12:37:51 |
+|      131 | JANE        | JACKMAN      |        214 | 2020-07-30 12:37:51 |
+|      132 | ADAM        | HOPPER       |        224 | 2020-07-30 12:37:51 |
+|      133 | RICHARD     | PENN         |        222 | 2020-07-30 12:37:51 |
+|      134 | GENE        | HOPKINS      |        251 | 2020-07-30 12:37:51 |
+|      135 | RITA        | REYNOLDS     |        250 | 2020-07-30 12:37:51 |
+|      136 | ED          | MANSFIELD    |        256 | 2020-07-30 12:37:51 |
+|      137 | MORGAN      | WILLIAMS     |        245 | 2020-07-30 12:37:51 |
+|      138 | LUCILLE     | DEE          |        231 | 2020-07-30 12:42:03 |
+|      139 | EWAN        | GOODING      |        225 | 2020-07-30 12:37:51 |
+|      140 | WHOOPI      | HURT         |        234 | 2020-07-30 12:37:51 |
+|      141 | CATE        | HARRIS       |        210 | 2020-07-30 12:41:19 |
+|      142 | JADA        | RYDER        |        236 | 2020-07-30 12:37:51 |
+|      143 | RIVER       | DEAN         |         36 | 2020-07-30 12:37:51 |
+|      144 | ANGELA      | WITHERSPOON  |         64 | 2020-07-30 12:37:51 |
+|      145 | KIM         | ALLEN        |        264 | 2020-07-30 12:37:51 |
+|      146 | ALBERT      | JOHANSSON    |        136 | 2020-07-30 12:37:51 |
+|      147 | FAY         | WINSLET      |        220 | 2020-07-30 12:42:23 |
+|      148 | EMILY       | DEE          |        209 | 2020-07-30 12:37:51 |
+|      149 | RUSSELL     | TEMPLE       |        313 | 2020-07-30 12:37:51 |
+|      150 | JAYNE       | NOLTE        |        345 | 2020-07-30 12:37:51 |
+|      151 | GEOFFREY    | HESTON       |        325 | 2020-07-30 12:37:51 |
+|      152 | BEN         | HARRIS       |        311 | 2020-07-30 12:37:51 |
+|      153 | MINNIE      | KILMER       |        336 | 2020-07-30 12:37:51 |
+|      154 | MERYL       | GIBSON       |        337 | 2020-07-30 12:37:51 |
+|      155 | IAN         | TANDY        |        324 | 2020-07-30 12:37:51 |
+|      156 | FAY         | WOOD         |        304 | 2020-07-30 12:37:51 |
+|      157 | GRETA       | MALDEN       |        355 | 2020-07-30 12:37:51 |
+|      158 | VIVIEN      | BASINGER     |        365 | 2020-07-30 12:37:51 |
+|      159 | LAURA       | BRODY        |        366 | 2020-07-30 12:37:51 |
+|      160 | CHRIS       | DEPP         |        377 | 2020-07-30 12:37:51 |
+|      161 | HARVEY      | HOPE         |        375 | 2020-07-30 12:37:51 |
+|      162 | OPRAH       | KILMER       |        357 | 2020-07-30 12:37:51 |
+|      163 | CHRISTOPHER | WEST         |        388 | 2020-07-30 12:37:51 |
+|      164 | HUMPHREY    | WILLIS       |        387 | 2020-07-30 12:37:51 |
+|      165 | AL          | GARLAND      |        386 | 2020-07-30 12:37:51 |
+|      166 | NICK        | DEGENERES    |        310 | 2020-07-30 14:10:21 |
+|      167 | LAURENCE    | BULLOCK      |        314 | 2020-07-30 12:37:51 |
+|      168 | WILL        | WILSON       |        333 | 2020-07-30 12:37:51 |
+|      169 | KENNETH     | HOFFMAN      |        303 | 2020-07-30 12:37:51 |
+|      170 | MENA        | HOPPER       |        317 | 2020-07-30 12:37:51 |
+|      171 | OLYMPIA     | PFEIFFER     |        371 | 2020-07-30 12:37:51 |
+|      172 | GROUCHO     | WILLIAMS     |        358 | 2020-07-30 12:37:51 |
+|      173 | ALAN        | DREYFUSS     |        369 | 2020-07-30 12:37:51 |
+|      174 | MICHAEL     | BENING       |        368 | 2020-07-30 12:37:51 |
+|      175 | WILLIAM     | HACKMAN      |        397 | 2020-07-30 12:37:51 |
+|      176 | JON         | CHASE        |        300 | 2020-07-30 12:37:51 |
+|      177 | GENE        | MCKELLEN     |        305 | 2020-07-30 12:37:51 |
+|      178 | LISA        | MONROE       |        359 | 2020-07-30 12:37:51 |
+|      179 | ED          | GUINESS      |        353 | 2020-07-30 12:37:51 |
+|      180 | JEFF        | SILVERSTONE  |        308 | 2020-07-30 12:37:51 |
+|      181 | MATTHEW     | CARREY       |        380 | 2020-07-30 12:37:51 |
+|      182 | DEBBIE      | AKROYD       |        319 | 2020-07-30 12:37:51 |
+|      183 | RUSSELL     | CLOSE        |        321 | 2020-07-30 12:37:51 |
+|      184 | HUMPHREY    | GARLAND      |        312 | 2020-07-30 12:37:51 |
+|      185 | MICHAEL     | BOLGER       |        101 | 2020-07-30 12:37:51 |
+|      186 | JULIA       | ZELLWEGER    |        301 | 2020-07-30 12:37:51 |
+|      187 | RENEE       | BALL         |        307 | 2020-07-30 12:37:51 |
+|      188 | ROCK        | DUKAKIS      |        372 | 2020-07-30 12:37:51 |
+|      189 | CUBA        | BIRCH        |        341 | 2020-07-30 12:37:51 |
+|      190 | AUDREY      | BAILEY       |        263 | 2020-07-30 12:37:51 |
+|      191 | GREGORY     | GOODING      |        339 | 2020-07-30 12:37:51 |
+|      192 | JOHN        | SUVARI       |        363 | 2020-07-30 12:37:51 |
+|      193 | BURT        | TEMPLE       |        239 | 2020-07-30 12:37:51 |
+|      194 | MERYL       | ALLEN        |        240 | 2020-07-30 12:37:51 |
+|      195 | JAYNE       | SILVERSTONE  |        347 | 2020-07-30 12:37:51 |
+|      196 | BELA        | WALKEN       |        350 | 2020-07-30 12:37:51 |
+|      197 | REESE       | WEST         |        360 | 2020-07-30 12:37:51 |
+|      198 | MARY        | KEITEL       |        260 | 2020-07-30 12:37:51 |
+|      199 | JULIA       | FAWCETT      |        361 | 2020-07-30 12:37:51 |
+|      200 | THORA       | TEMPLE       |        401 | 2020-07-30 12:37:51 |
++----------+-------------+--------------+------------+---------------------+
+200 rows in set (0.02 sec)
+
+mysql> select * from actor limit 10;
++----------+------------+--------------+------------+---------------------+
+| actor_id | first_name | last_name    | address_id | last_update         |
++----------+------------+--------------+------------+---------------------+
+|        1 | PENELOPE   | GUINESS      |          1 | 2020-07-30 12:37:51 |
+|        2 | NICK       | WAHLBERG     |          4 | 2020-07-30 12:37:51 |
+|        3 | ED         | CHASE        |          2 | 2020-07-30 12:37:51 |
+|        4 | JENNIFER   | DAVIS        |          3 | 2020-07-30 12:37:51 |
+|        5 | JOHNNY     | LOLLOBRIGIDA |          5 | 2020-07-30 12:37:51 |
+|        6 | BETTE      | NICHOLSON    |          7 | 2020-07-30 12:37:51 |
+|        7 | GRACE      | MOSTEL       |          6 | 2020-07-30 12:37:51 |
+|        8 | MATTHEW    | JOHANSSON    |          8 | 2020-07-30 12:37:51 |
+|        9 | JOE        | SWANK        |         10 | 2020-07-30 12:37:51 |
+|       10 | CHRISTIAN  | GABLE        |          9 | 2020-07-30 12:37:51 |
++----------+------------+--------------+------------+---------------------+
+10 rows in set (0.00 sec)
+
+mysql> select first_name AS FIRST, last_name AS LAST from actor;
++-------------+--------------+
+| FIRST       | LAST         |
++-------------+--------------+
+| PENELOPE    | GUINESS      |
+| NICK        | WAHLBERG     |
+| ED          | CHASE        |
+| JENNIFER    | DAVIS        |
+| JOHNNY      | LOLLOBRIGIDA |
+| BETTE       | NICHOLSON    |
+| GRACE       | MOSTEL       |
+| MATTHEW     | JOHANSSON    |
+| JOE         | SWANK        |
+| CHRISTIAN   | GABLE        |
+| ZERO        | CAGE         |
+| KARL        | BERRY        |
+| UMA         | WOOD         |
+| VIVIEN      | BERGEN       |
+| CUBA        | OLIVIER      |
+| FRED        | COSTNER      |
+| HELEN       | VOIGHT       |
+| DAN         | TORN         |
+| BOB         | FAWCETT      |
+| LUCILLE     | TRACY        |
+| KIRSTEN     | PALTROW      |
+| ELVIS       | MARX         |
+| SANDRA      | KILMER       |
+| CAMERON     | STREEP       |
+| KEVIN       | BLOOM        |
+| RIP         | CRAWFORD     |
+| JULIA       | MCQUEEN      |
+| WOODY       | HOFFMAN      |
+| ALEC        | WAYNE        |
+| SANDRA      | PECK         |
+| SISSY       | SOBIESKI     |
+| TIM         | HACKMAN      |
+| MILLA       | PECK         |
+| AUDREY      | OLIVIER      |
+| JUDY        | DEAN         |
+| BURT        | DUKAKIS      |
+| VAL         | BOLGER       |
+| TOM         | MCKELLEN     |
+| GOLDIE      | BRODY        |
+| JOHNNY      | CAGE         |
+| JODIE       | DEGENERES    |
+| TOM         | MIRANDA      |
+| KIRK        | JOVOVICH     |
+| NICK        | STALLONE     |
+| REESE       | KILMER       |
+| PARKER      | GOLDBERG     |
+| JULIA       | BARRYMORE    |
+| FRANCES     | DAY-LEWIS    |
+| ANNE        | CRONYN       |
+| NATALIE     | HOPKINS      |
+| GARY        | PHOENIX      |
+| CARMEN      | HUNT         |
+| MENA        | TEMPLE       |
+| PENELOPE    | PINKETT      |
+| FAY         | KILMER       |
+| DAN         | HARRIS       |
+| JUDE        | CRUISE       |
+| CHRISTIAN   | AKROYD       |
+| DUSTIN      | TAUTOU       |
+| HENRY       | BERRY        |
+| CHRISTIAN   | NEESON       |
+| JAYNE       | NEESON       |
+| CAMERON     | WRAY         |
+| RAY         | JOHANSSON    |
+| ANGELA      | HUDSON       |
+| MARY        | TANDY        |
+| JESSICA     | BAILEY       |
+| RIP         | WINSLET      |
+| KENNETH     | PALTROW      |
+| MICHELLE    | MCCONAUGHEY  |
+| ADAM        | GRANT        |
+| SEAN        | WILLIAMS     |
+| GARY        | PENN         |
+| MILLA       | KEITEL       |
+| BURT        | POSEY        |
+| ANGELINA    | ASTAIRE      |
+| CARY        | MCCONAUGHEY  |
+| GROUCHO     | SINATRA      |
+| MAE         | HOFFMAN      |
+| RALPH       | CRUZ         |
+| SCARLETT    | DAMON        |
+| WOODY       | JOLIE        |
+| BEN         | WILLIS       |
+| JAMES       | PITT         |
+| MINNIE      | ZELLWEGER    |
+| GREG        | CHAPLIN      |
+| SPENCER     | PECK         |
+| KENNETH     | PESCI        |
+| CHARLIZE    | DENCH        |
+| SEAN        | GUINESS      |
+| CHRISTOPHER | BERRY        |
+| KIRSTEN     | AKROYD       |
+| ELLEN       | PRESLEY      |
+| KENNETH     | TORN         |
+| DARYL       | WAHLBERG     |
+| GENE        | WILLIS       |
+| MEG         | HAWKE        |
+| CHRIS       | BRIDGES      |
+| JIM         | MOSTEL       |
+| SPENCER     | DEPP         |
+| SUSAN       | DAVIS        |
+| WALTER      | TORN         |
+| MATTHEW     | LEIGH        |
+| PENELOPE    | CRONYN       |
+| SIDNEY      | CROWE        |
+| GROUCHO     | DUNST        |
+| GINA        | DEGENERES    |
+| WARREN      | NOLTE        |
+| SYLVESTER   | DERN         |
+| SUSAN       | DAVIS        |
+| CAMERON     | ZELLWEGER    |
+| RUSSELL     | BACALL       |
+| MORGAN      | HOPKINS      |
+| MORGAN      | MCDORMAND    |
+| HARRISON    | BALE         |
+| DAN         | STREEP       |
+| RENEE       | TRACY        |
+| CUBA        | ALLEN        |
+| WARREN      | JACKMAN      |
+| PENELOPE    | MONROE       |
+| LIZA        | BERGMAN      |
+| SALMA       | NOLTE        |
+| JULIANNE    | DENCH        |
+| SCARLETT    | BENING       |
+| ALBERT      | NOLTE        |
+| FRANCES     | TOMEI        |
+| KEVIN       | GARLAND      |
+| CATE        | MCQUEEN      |
+| DARYL       | CRAWFORD     |
+| GRETA       | KEITEL       |
+| JANE        | JACKMAN      |
+| ADAM        | HOPPER       |
+| RICHARD     | PENN         |
+| GENE        | HOPKINS      |
+| RITA        | REYNOLDS     |
+| ED          | MANSFIELD    |
+| MORGAN      | WILLIAMS     |
+| LUCILLE     | DEE          |
+| EWAN        | GOODING      |
+| WHOOPI      | HURT         |
+| CATE        | HARRIS       |
+| JADA        | RYDER        |
+| RIVER       | DEAN         |
+| ANGELA      | WITHERSPOON  |
+| KIM         | ALLEN        |
+| ALBERT      | JOHANSSON    |
+| FAY         | WINSLET      |
+| EMILY       | DEE          |
+| RUSSELL     | TEMPLE       |
+| JAYNE       | NOLTE        |
+| GEOFFREY    | HESTON       |
+| BEN         | HARRIS       |
+| MINNIE      | KILMER       |
+| MERYL       | GIBSON       |
+| IAN         | TANDY        |
+| FAY         | WOOD         |
+| GRETA       | MALDEN       |
+| VIVIEN      | BASINGER     |
+| LAURA       | BRODY        |
+| CHRIS       | DEPP         |
+| HARVEY      | HOPE         |
+| OPRAH       | KILMER       |
+| CHRISTOPHER | WEST         |
+| HUMPHREY    | WILLIS       |
+| AL          | GARLAND      |
+| NICK        | DEGENERES    |
+| LAURENCE    | BULLOCK      |
+| WILL        | WILSON       |
+| KENNETH     | HOFFMAN      |
+| MENA        | HOPPER       |
+| OLYMPIA     | PFEIFFER     |
+| GROUCHO     | WILLIAMS     |
+| ALAN        | DREYFUSS     |
+| MICHAEL     | BENING       |
+| WILLIAM     | HACKMAN      |
+| JON         | CHASE        |
+| GENE        | MCKELLEN     |
+| LISA        | MONROE       |
+| ED          | GUINESS      |
+| JEFF        | SILVERSTONE  |
+| MATTHEW     | CARREY       |
+| DEBBIE      | AKROYD       |
+| RUSSELL     | CLOSE        |
+| HUMPHREY    | GARLAND      |
+| MICHAEL     | BOLGER       |
+| JULIA       | ZELLWEGER    |
+| RENEE       | BALL         |
+| ROCK        | DUKAKIS      |
+| CUBA        | BIRCH        |
+| AUDREY      | BAILEY       |
+| GREGORY     | GOODING      |
+| JOHN        | SUVARI       |
+| BURT        | TEMPLE       |
+| MERYL       | ALLEN        |
+| JAYNE       | SILVERSTONE  |
+| BELA        | WALKEN       |
+| REESE       | WEST         |
+| MARY        | KEITEL       |
+| JULIA       | FAWCETT      |
+| THORA       | TEMPLE       |
++-------------+--------------+
+200 rows in set (0.00 sec)
+
+mysql> select first_name AS FIRST, last_name AS LAST from actor LIMIT 10;
++-----------+--------------+
+| FIRST     | LAST         |
++-----------+--------------+
+| PENELOPE  | GUINESS      |
+| NICK      | WAHLBERG     |
+| ED        | CHASE        |
+| JENNIFER  | DAVIS        |
+| JOHNNY    | LOLLOBRIGIDA |
+| BETTE     | NICHOLSON    |
+| GRACE     | MOSTEL       |
+| MATTHEW   | JOHANSSON    |
+| JOE       | SWANK        |
+| CHRISTIAN | GABLE        |
++-----------+--------------+
+10 rows in set (0.00 sec)
+
+mysql> select COUNT(*) FROM ADDRESS WHERE DISTRICT = 'TEXAS';
++----------+
+| COUNT(*) |
++----------+
+|        5 |
++----------+
+1 row in set (0.03 sec)
+
+mysql> SELECT DISTINCT FROM ADDRESS ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM ADDRESS' at line 1
+mysql> SELECT DISTINCT DISTRICT FROM ADDRESS;
++----------------------+
+| DISTRICT             |
++----------------------+
+| Alberta              |
+| QLD                  |
+| Nagasaki             |
+| California           |
+| Attika               |
+| Mandalay             |
+| Nantou               |
+| Texas                |
+| Central Serbia       |
+| Hamilton             |
+| Masqat               |
+| Esfahan              |
+| Kanagawa             |
+| Haryana              |
+| Osmaniye             |
+| Madhya Pradesh       |
+| England              |
+| Kalmykia             |
+| Kaduna               |
+| Northern Cape        |
+| Nothwest Border Prov |
+| Dhaka                |
+| Rabat-Sal-Zammour-Z  |
+| Liepaja              |
+| Crdoba               |
+| Sind                 |
+|                      |
+| Southern Mindanao    |
+| Bihar                |
+| Yamaguchi            |
+| Taipei               |
+| West Bengali         |
+| Uttar Pradesh        |
+| Piemonte             |
+| Okayama              |
+| Midi-Pyrnes          |
+| Markazi              |
+| Henan                |
+| Chisinau             |
+| Esprito Santo        |
+| Oriental             |
+| Yerevan              |
+| Nonthaburi           |
+| Tahiti               |
+| Lipetsk              |
+| Antofagasta          |
+| Moscow (City)        |
+| Cear                 |
+| Tatarstan            |
+| Mekka                |
+| Khartum              |
+| Galicia              |
+| Chiba                |
+| Moskova              |
+| Vaduz                |
+| Sarawak              |
+| Karnataka            |
+| Rajasthan            |
+| Basel-Stadt          |
+| Missouri             |
+| Nebraska             |
+| Sichuan              |
+| Cayenne              |
+| Skne ln              |
+| Hunan                |
+| Bchar                |
+| Eastern Visayas      |
+| National Capital Reg |
+| Chiayi               |
+| So Paulo             |
+| Changhwa             |
+| Pavlodar             |
+| Oyo & Osun           |
+| Mahajanga            |
+| Krim                 |
+| Gauteng              |
+| Puebla               |
+| Songkhla             |
+| Sucre                |
+| Cheju                |
+| Buenos Aires         |
+| Guangdong            |
+| Brunei and Muara     |
+| Gois                 |
+| Inner Mongolia       |
+| Caraga               |
+| Punjab               |
+| Georgia              |
+| Tete                 |
+| Abu Dhabi            |
+| Kyongsangbuk         |
+| Asir                 |
+| Ha Darom             |
+| Kwara & Kogi         |
+| Provence-Alpes-Cte   |
+| Funafuti             |
+| Ivanovo              |
+| Mxico                |
+| North West           |
+| Hubei                |
+| Distrito Federal     |
+| Nordrhein-Westfalen  |
+| Central Java         |
+| Gujarat              |
+| al-Qalyubiya         |
+| Risaralda            |
+| Lima                 |
+| Ktahya               |
+| Smolensk             |
+| Slaskie              |
+| Shandong             |
+| Taka-Karpatia        |
+| Free State           |
+| Coahuila de Zaragoza |
+| Maharashtra          |
+| Gelderland           |
+| Ynlin                |
+| Tennessee            |
+| Hiroshima            |
+| Scotland             |
+| Kilis                |
+| Minsk                |
+| Michigan             |
+| Saitama              |
+| Saint-Denis          |
+| Massachusetts        |
+| Michoacn de Ocampo   |
+| Assam                |
+| Jakarta Raya         |
+| Shanxi               |
+| Bern                 |
+| Ondo & Ekiti         |
+| Pyongyang-si         |
+| North Carolina       |
+| North Austria        |
+| Tel Aviv             |
+| Pays de la Loire     |
+| Gifu                 |
+| Adana                |
+| Xinxiang             |
+| Lilongwe             |
+| Gansu                |
+| Jiangxi              |
+| Perak                |
+| Batman               |
+| Steiermark           |
+| Miranda              |
+| Kerala               |
+| Skikda               |
+| Tamaulipas           |
+| Kirov                |
+| Noord-Brabant        |
+| Chaharmahal va Bakht |
+| Sumy                 |
+| Ontario              |
+| Tabora               |
+| Rostov-na-Donu       |
+| Nyanza               |
+| Tokyo-to             |
+| Baden-Wrttemberg     |
+| Jiangsu              |
+| Haiphong             |
+| Ahal                 |
+| Sulawesi Utara       |
+| Usak                 |
+| Alto Paran           |
+| Santa Catarina       |
+| Kitaa                |
+| Aden                 |
+| Jilin                |
+| Washington           |
+| Taizz                |
+| Haskovo              |
+| Kabol                |
+| Zanzibar West        |
+| Sisilia              |
+| Jaroslavl            |
+| Tamil Nadu           |
+| Asuncin              |
+| Saarland             |
+| Phnom Penh           |
+| Botosani             |
+| Qina                 |
+| Hawalli              |
+| Valle                |
+| Southern Tagalog     |
+| Chollanam            |
+| West Java            |
+| Fukushima            |
+| Hebei                |
+| Tucumn               |
+| Central Visayas      |
+| Kyonggi              |
+| Paran                |
+| Florida              |
+| Tianjin              |
+| Anhalt Sachsen       |
+| Miyazaki             |
+| Minas Gerais         |
+| Central Luzon        |
+| Sagaing              |
+| Sofala               |
+| Santiago             |
+| Cagayan Valley       |
+| Manab                |
+| Osaka                |
+| Severn Morava        |
+| Salzburg             |
+| Wielkopolskie        |
+| Guanajuato           |
+| Illinois             |
+| Bursa                |
+| East Azerbaidzan     |
+| Fujian               |
+| Ponce                |
+| Edo & Delta          |
+| Shiga                |
+| Kowloon and New Kowl |
+| Gurico               |
+| Virginia             |
+| Sharja               |
+| Baskimaa             |
+| Ohio                 |
+| Pietari              |
+| Pohjois-Pohjanmaa    |
+| Kaliningrad          |
+| Liaoning             |
+| Sanaa                |
+| Callao               |
+| Kedah                |
+| Rio de Janeiro       |
+| Lombardia            |
+| Kursk                |
+| Tabuk                |
+| Streymoyar           |
+| Kujawsko-Pomorskie   |
+| Tutuila              |
+| Central              |
+| Morelos              |
+| St George            |
+| Santa F              |
+| Baki                 |
+| Sumqayit             |
+| Sousse               |
+| Western Cape         |
+| Hanoi                |
+| Roraima              |
+| Baja California      |
+| Tongatapu            |
+| Adygea               |
+| Daugavpils           |
+| Tuvassia             |
+| Krasnojarsk          |
+| Nord-Ouest           |
+| Hidalgo              |
+| Shimane              |
+| Bratislava           |
+| Jharkhand            |
+| Arecibo              |
+| Centre               |
+| Par                  |
+| Jalisco              |
+| Okinawa              |
+| Balikesir            |
+| Andhra Pradesh       |
+| Chihuahua            |
+| East Java            |
+| Pernambuco           |
+| East Kasai           |
+| Kurgan               |
+| Kermanshah           |
+| New Hampshire        |
+| Namibe               |
+| Ibaragi              |
+| Hmelnytskyi          |
+| Shaba                |
+| Nakhon Sawan         |
+| Addis Abeba          |
+| Asturia              |
+| al-Qadarif           |
+| Rio Grande do Sul    |
+| Bretagne             |
+| St Thomas            |
+| Northern             |
+| Bauchi & Gombe       |
+| Utrecht              |
+| al-Sharqiya          |
+| Puerto Plata         |
+| Sawhaj               |
+| Oaxaca               |
+| Komi                 |
+| Nizni Novgorod       |
+| Chuquisaca           |
+| KwaZulu-Natal        |
+| Nampula              |
+| Northern Mindanao    |
+| British Colombia     |
+| La Romana            |
+| Copperbelt           |
+| Batna                |
+| Tartumaa             |
+| Baijeri              |
+| Kerman               |
+| Sinaloa              |
+| Zulia                |
+| La Paz               |
+| Ziguinchor           |
+| Caquet               |
+| Irkutsk              |
+| Nova Scotia          |
+| OHiggins             |
+| Hodeida              |
+| Nam Ha               |
+| Aceh                 |
+| Drenthe              |
+| Qubec                |
+| Gaziantep            |
+| Mwanza               |
+| Veracruz             |
+| Denizli              |
+| Ningxia              |
+| Stavropol            |
+| Baja California Sur  |
+| Boyac                |
+| al-Daqahliya         |
+| Istanbul             |
+| Chimborazo           |
+| Zufar                |
+| Apulia               |
+| Lubelskie            |
+| Nagano               |
+| Kalimantan Barat     |
+| Eskisehir            |
+| Volgograd            |
+| Heilongjiang         |
+| Coquimbo             |
+| Battambang           |
+| Sivas                |
+| Gumma                |
+| Khanh Hoa            |
+| Nghe An              |
+| Friuli-Venezia Giuli |
+| Mogiljov             |
+| Benguela             |
+| Mie                  |
+| Chari-Baguirmi       |
+| Kang-won             |
+| Colorado             |
+| Carabobo             |
+| Ruse                 |
+| Toscana              |
+| Sumatera Selatan     |
+| Tadla-Azilal         |
+| Hainan               |
+| Ishikawa             |
+| Zhejiang             |
+| Vojvodina            |
+| Vilna                |
+| Dolnoslaskie         |
+| Sokoto & Kebbi & Zam |
+| Bukarest             |
+| Huanuco              |
+| Tokat                |
+| Anzotegui            |
+| Mazowieckie          |
+| Qaraghandy           |
+| Kaohsiung            |
+| Campeche             |
+| Ninawa               |
+| Central Mindanao     |
+| Guerrero             |
+| Banjul               |
+| Loja                 |
+| al-Manama            |
+| Fejr                 |
+| West Greece          |
+| Piura                |
+| Vaud                 |
++----------------------+
+378 rows in set (0.02 sec)
+
+mysql> SELECT  DISTRICT FROM ADDRESS;
++----------------------+
+| DISTRICT             |
++----------------------+
+| Alberta              |
+| QLD                  |
+| Alberta              |
+| QLD                  |
+| Nagasaki             |
+| California           |
+| Attika               |
+| Mandalay             |
+| Nantou               |
+| Texas                |
+| Central Serbia       |
+| Hamilton             |
+| Masqat               |
+| Esfahan              |
+| Kanagawa             |
+| Haryana              |
+| Osmaniye             |
+| California           |
+| Madhya Pradesh       |
+| England              |
+| Kalmykia             |
+| Kaduna               |
+| Northern Cape        |
+| Nothwest Border Prov |
+| Dhaka                |
+| Rabat-Sal-Zammour-Z  |
+| Liepaja              |
+| Crdoba               |
+| Sind                 |
+|                      |
+| Southern Mindanao    |
+| Bihar                |
+| Yamaguchi            |
+| Taipei               |
+| West Bengali         |
+| Uttar Pradesh        |
+| Piemonte             |
+| Okayama              |
+| Midi-Pyrnes          |
+| Markazi              |
+| Henan                |
+| Chisinau             |
+| Esprito Santo        |
+| Oriental             |
+| Yerevan              |
+| Nonthaburi           |
+| Tahiti               |
+| Lipetsk              |
+| Antofagasta          |
+| Moscow (City)        |
+| Cear                 |
+| Tatarstan            |
+| Mekka                |
+| Khartum              |
+| California           |
+| Galicia              |
+| Chiba                |
+| Yamaguchi            |
+| Moskova              |
+| Tahiti               |
+| Vaduz                |
+| Sarawak              |
+| Karnataka            |
+| Rajasthan            |
+| Basel-Stadt          |
+| Missouri             |
+| Nebraska             |
+| Sichuan              |
+| Cayenne              |
+| Skne ln              |
+| Hunan                |
+| Madhya Pradesh       |
+| Bchar                |
+| Mekka                |
+| Eastern Visayas      |
+| National Capital Reg |
+| Chiayi               |
+| So Paulo             |
+| Changhwa             |
+| Pavlodar             |
+| So Paulo             |
+| Uttar Pradesh        |
+| Kanagawa             |
+| Oyo & Osun           |
+| Mahajanga            |
+| Krim                 |
+| Gauteng              |
+| Puebla               |
+| England              |
+| Songkhla             |
+| Sucre                |
+| Cheju                |
+| Buenos Aires         |
+| Guangdong            |
+| Brunei and Muara     |
+| Gois                 |
+| Inner Mongolia       |
+| Caraga               |
+| Punjab               |
+| Georgia              |
+| Tete                 |
+| Abu Dhabi            |
+| Kyongsangbuk         |
+| Lipetsk              |
+| Asir                 |
+| Ha Darom             |
+| Kwara & Kogi         |
+| Provence-Alpes-Cte   |
+| Funafuti             |
+| Ivanovo              |
+| Buenos Aires         |
+| Mxico                |
+| North West           |
+| Hubei                |
+| Distrito Federal     |
+| California           |
+| Sucre                |
+| Nordrhein-Westfalen  |
+| Mxico                |
+| Central Java         |
+| Gujarat              |
+| Texas                |
+| al-Qalyubiya         |
+| Risaralda            |
+| Uttar Pradesh        |
+| Lima                 |
+| Uttar Pradesh        |
+| Ktahya               |
+| Gauteng              |
+| So Paulo             |
+| Smolensk             |
+| Slaskie              |
+| Shandong             |
+| Gois                 |
+| Taka-Karpatia        |
+| Free State           |
+| Coahuila de Zaragoza |
+| al-Qalyubiya         |
+| Maharashtra          |
+| Karnataka            |
+| Gelderland           |
+| Inner Mongolia       |
+| Ynlin                |
+| Tennessee            |
+| Hiroshima            |
+| Scotland             |
+| Kilis                |
+| Minsk                |
+| Gauteng              |
+| Michigan             |
+| Saitama              |
+| Saint-Denis          |
+| Massachusetts        |
+| Michoacn de Ocampo   |
+| Shandong             |
+| Assam                |
+| Jakarta Raya         |
+| Shanxi               |
+| Bern                 |
+| Ondo & Ekiti         |
+| Pyongyang-si         |
+| North Carolina       |
+| North Austria        |
+| Moskova              |
+| Tel Aviv             |
+| Pays de la Loire     |
+| Gifu                 |
+| Adana                |
+| Xinxiang             |
+| Lilongwe             |
+| Maharashtra          |
+| Gansu                |
+| Jiangxi              |
+| Rajasthan            |
+| Perak                |
+| Batman               |
+| Steiermark           |
+| Miranda              |
+| Kerala               |
+| Skikda               |
+| Tamaulipas           |
+| So Paulo             |
+| Kirov                |
+| Risaralda            |
+| Tennessee            |
+| California           |
+| Gois                 |
+| Noord-Brabant        |
+| Chaharmahal va Bakht |
+| West Bengali         |
+| Sumy                 |
+| Caraga               |
+| Ontario              |
+| Tabora               |
+| Rostov-na-Donu       |
+| Uttar Pradesh        |
+| Nyanza               |
+| Tokyo-to             |
+| Nordrhein-Westfalen  |
+| Baden-Wrttemberg     |
+| Jiangsu              |
+| Ondo & Ekiti         |
+| Haiphong             |
+| Ahal                 |
+| Nordrhein-Westfalen  |
+| Maharashtra          |
+| Sulawesi Utara       |
+| Usak                 |
+| Alto Paran           |
+| Santa Catarina       |
+| Kitaa                |
+| West Bengali         |
+| Rajasthan            |
+| Aden                 |
+| Jilin                |
+| Washington           |
+| Taizz                |
+| California           |
+| Haskovo              |
+| Gois                 |
+| Uttar Pradesh        |
+| Kabol                |
+| Buenos Aires         |
+| Zanzibar West        |
+| Sisilia              |
+| Jaroslavl            |
+| Punjab               |
+| Rajasthan            |
+| Tamil Nadu           |
+| Asuncin              |
+| Saarland             |
+| Phnom Penh           |
+| Gois                 |
+| Botosani             |
+| West Bengali         |
+| Kaduna               |
+| Qina                 |
+| Hawalli              |
+| Valle                |
+| Southern Tagalog     |
+| Chollanam            |
+| Karnataka            |
+| West Java            |
+| Fukushima            |
+| Hubei                |
+| Hebei                |
+| Tucumn               |
+| Central Visayas      |
+| Kyonggi              |
+| Paran                |
+| Mxico                |
+| Florida              |
+| Tianjin              |
+| Oyo & Osun           |
+| Anhalt Sachsen       |
+| England              |
+| Miyazaki             |
+| Minas Gerais         |
+| Central Luzon        |
+| Sagaing              |
+| Sofala               |
+| Santiago             |
+| West Bengali         |
+| Shanxi               |
+| Cagayan Valley       |
+| Manab                |
+| National Capital Reg |
+| Osaka                |
+| Severn Morava        |
+| Salzburg             |
+| Hunan                |
+| Kerala               |
+| California           |
+| Wielkopolskie        |
+| Tamil Nadu           |
+| Shandong             |
+| Guanajuato           |
+| Haryana              |
+| Illinois             |
+| Michigan             |
+| Oyo & Osun           |
+| Bursa                |
+| East Azerbaidzan     |
+| Ondo & Ekiti         |
+| Fujian               |
+| Ponce                |
+| Xinxiang             |
+| Edo & Delta          |
+| Shiga                |
+| Oyo & Osun           |
+| Tamil Nadu           |
+| Guanajuato           |
+| Kowloon and New Kowl |
+| Gurico               |
+| Virginia             |
+| Sharja               |
+| Baskimaa             |
+| Ohio                 |
+| Pietari              |
+| Punjab               |
+| Maharashtra          |
+| Pohjois-Pohjanmaa    |
+| Hiroshima            |
+| Maharashtra          |
+| Kaliningrad          |
+| Liaoning             |
+| Sanaa                |
+| Callao               |
+| Texas                |
+| Kedah                |
+| Rio de Janeiro       |
+| Missouri             |
+| Lombardia            |
+| Minas Gerais         |
+| Kursk                |
+| Tabuk                |
+| Hubei                |
+| So Paulo             |
+| Tel Aviv             |
+| Maharashtra          |
+| Streymoyar           |
+| Kujawsko-Pomorskie   |
+| Mxico                |
+| Tutuila              |
+| Central              |
+| Buenos Aires         |
+| Morelos              |
+| Henan                |
+| Distrito Federal     |
+| St George            |
+| Adana                |
+| West Java            |
+| Dhaka                |
+| Illinois             |
+| Santa F              |
+| Dhaka                |
+| Baki                 |
+| Sumqayit             |
+| Sousse               |
+| Uttar Pradesh        |
+| Hiroshima            |
+| Western Cape         |
+| Henan                |
+| Hanoi                |
+| Gelderland           |
+| Roraima              |
+| Baja California      |
+| Tongatapu            |
+| Central              |
+| Adygea               |
+| Daugavpils           |
+| Taipei               |
+| Southern Tagalog     |
+| Tuvassia             |
+| Krasnojarsk          |
+| Nord-Ouest           |
+| Hidalgo              |
+| So Paulo             |
+| Shimane              |
+| Madhya Pradesh       |
+| Bratislava           |
+| Jharkhand            |
+| Buenos Aires         |
+| Arecibo              |
+| Centre               |
+| Par                  |
+| Central              |
+| Jalisco              |
+| Okinawa              |
+| Balikesir            |
+| Andhra Pradesh       |
+| Esfahan              |
+| Chihuahua            |
+| Karnataka            |
+| Southern Tagalog     |
+| East Java            |
+| Southern Tagalog     |
+| Pernambuco           |
+| East Kasai           |
+| Kurgan               |
+| Kermanshah           |
+| Guangdong            |
+| Gujarat              |
+| Slaskie              |
+|                      |
+| New Hampshire        |
+| Namibe               |
+| Jiangsu              |
+| Ibaragi              |
+| Hmelnytskyi          |
+| Shaba                |
+| Southern Tagalog     |
+| Sichuan              |
+| Nakhon Sawan         |
+| Osaka                |
+| Addis Abeba          |
+| Moskova              |
+| Asturia              |
+| al-Qadarif           |
+| Saitama              |
+| Krasnojarsk          |
+| Rio Grande do Sul    |
+| Punjab               |
+| Texas                |
+| Fukushima            |
+| Bretagne             |
+| Tamil Nadu           |
+| Saitama              |
+| Buenos Aires         |
+| St Thomas            |
+| North West           |
+| Northern             |
+| Bauchi & Gombe       |
+| Ontario              |
+| West Java            |
+| Punjab               |
+| West Bengali         |
+| Guanajuato           |
+| Utrecht              |
+| Sind                 |
+| al-Sharqiya          |
+| Puerto Plata         |
+| Bihar                |
+| California           |
+| Tamil Nadu           |
+| Hubei                |
+| Sawhaj               |
+| Guangdong            |
+| Oaxaca               |
+| Jharkhand            |
+| So Paulo             |
+| Komi                 |
+| Okayama              |
+| Nizni Novgorod       |
+| Chuquisaca           |
+| KwaZulu-Natal        |
+| Nampula              |
+| Northern Mindanao    |
+| Shandong             |
+| British Colombia     |
+| La Romana            |
+| Copperbelt           |
+| Lombardia            |
+| Maharashtra          |
+| Batna                |
+| Inner Mongolia       |
+| Rio Grande do Sul    |
+| Tartumaa             |
+| Buenos Aires         |
+| West Bengali         |
+| Tatarstan            |
+| Baijeri              |
+| Kerman               |
+| Central Java         |
+| Sinaloa              |
+| Abu Dhabi            |
+| Zulia                |
+| Michoacn de Ocampo   |
+| La Paz               |
+| Ziguinchor           |
+| Illinois             |
+| Central Java         |
+| Esfahan              |
+| Caquet               |
+| Northern Mindanao    |
+| Irkutsk              |
+| Nova Scotia          |
+| OHiggins             |
+| Jalisco              |
+| Shandong             |
+| Chihuahua            |
+| Karnataka            |
+| Galicia              |
+| Hodeida              |
+| Gauteng              |
+| Nam Ha               |
+| Aceh                 |
+| Drenthe              |
+| Sumy                 |
+| Qubec                |
+| England              |
+| Ha Darom             |
+| Ohio                 |
+| Gaziantep            |
+| Mwanza               |
+| Veracruz             |
+| Denizli              |
+| Ningxia              |
+| Guangdong            |
+| Coahuila de Zaragoza |
+| Stavropol            |
+| Baja California Sur  |
+| Okayama              |
+| Boyac                |
+| al-Daqahliya         |
+| West Bengali         |
+| Istanbul             |
+| Chimborazo           |
+| Gansu                |
+| Shandong             |
+| England              |
+| Zufar                |
+| Apulia               |
+| East Java            |
+| Lubelskie            |
+| West Bengali         |
+| Nagano               |
+| Illinois             |
+| Central Luzon        |
+| Kalimantan Barat     |
+| Eskisehir            |
+| Andhra Pradesh       |
+| Bihar                |
+| Volgograd            |
+| Heilongjiang         |
+| Ontario              |
+|                      |
+| Hubei                |
+| Coquimbo             |
+| Battambang           |
+| Taipei               |
+| Sivas                |
+| Gumma                |
+| Khanh Hoa            |
+| Liaoning             |
+| Southern Tagalog     |
+| Nghe An              |
+| West Java            |
+| Friuli-Venezia Giuli |
+| Florida              |
+| Mogiljov             |
+| Benguela             |
+| Andhra Pradesh       |
+| Buenos Aires         |
+| Mie                  |
+| Khanh Hoa            |
+| Shandong             |
+| Uttar Pradesh        |
+| Chari-Baguirmi       |
+| Kang-won             |
+| Colorado             |
+| Jilin                |
+| Carabobo             |
+| Ruse                 |
+| Toscana              |
+| Sumatera Selatan     |
+| Tadla-Azilal         |
+| So Paulo             |
+| Sumy                 |
+| Hainan               |
+| Ishikawa             |
+| Central Luzon        |
+| Galicia              |
+| Zhejiang             |
+| Rio Grande do Sul    |
+| Zhejiang             |
+| Vojvodina            |
+| Gujarat              |
+| KwaZulu-Natal        |
+| England              |
+| Vilna                |
+| Dolnoslaskie         |
+| al-Sharqiya          |
+| Buenos Aires         |
+| Texas                |
+| Sokoto & Kebbi & Zam |
+| Bukarest             |
+| Shandong             |
+| Huanuco              |
+| Tokat                |
+| Moskova              |
+| Anzotegui            |
+| Sichuan              |
+| Coahuila de Zaragoza |
+| Mazowieckie          |
+| Slaskie              |
+| Qaraghandy           |
+| Tokyo-to             |
+| Morelos              |
+| Kaohsiung            |
+| Taipei               |
+| Campeche             |
+| Ninawa               |
+| Central Mindanao     |
+| Guerrero             |
+| Hidalgo              |
+| England              |
+| Banjul               |
+| Buenos Aires         |
+| Nantou               |
+| Guanajuato           |
+| Shandong             |
+| Loja                 |
+| al-Manama            |
+| Minas Gerais         |
+| Fejr                 |
+| California           |
+| Inner Mongolia       |
+| Liaoning             |
+| West Greece          |
+| Piura                |
+| Vaud                 |
+| Heilongjiang         |
++----------------------+
+603 rows in set (0.00 sec)
+
+mysql> SELECT DISTINCT DISTRICT FROM ADDRESS;
++----------------------+
+| DISTRICT             |
++----------------------+
+| Alberta              |
+| QLD                  |
+| Nagasaki             |
+| California           |
+| Attika               |
+| Mandalay             |
+| Nantou               |
+| Texas                |
+| Central Serbia       |
+| Hamilton             |
+| Masqat               |
+| Esfahan              |
+| Kanagawa             |
+| Haryana              |
+| Osmaniye             |
+| Madhya Pradesh       |
+| England              |
+| Kalmykia             |
+| Kaduna               |
+| Northern Cape        |
+| Nothwest Border Prov |
+| Dhaka                |
+| Rabat-Sal-Zammour-Z  |
+| Liepaja              |
+| Crdoba               |
+| Sind                 |
+|                      |
+| Southern Mindanao    |
+| Bihar                |
+| Yamaguchi            |
+| Taipei               |
+| West Bengali         |
+| Uttar Pradesh        |
+| Piemonte             |
+| Okayama              |
+| Midi-Pyrnes          |
+| Markazi              |
+| Henan                |
+| Chisinau             |
+| Esprito Santo        |
+| Oriental             |
+| Yerevan              |
+| Nonthaburi           |
+| Tahiti               |
+| Lipetsk              |
+| Antofagasta          |
+| Moscow (City)        |
+| Cear                 |
+| Tatarstan            |
+| Mekka                |
+| Khartum              |
+| Galicia              |
+| Chiba                |
+| Moskova              |
+| Vaduz                |
+| Sarawak              |
+| Karnataka            |
+| Rajasthan            |
+| Basel-Stadt          |
+| Missouri             |
+| Nebraska             |
+| Sichuan              |
+| Cayenne              |
+| Skne ln              |
+| Hunan                |
+| Bchar                |
+| Eastern Visayas      |
+| National Capital Reg |
+| Chiayi               |
+| So Paulo             |
+| Changhwa             |
+| Pavlodar             |
+| Oyo & Osun           |
+| Mahajanga            |
+| Krim                 |
+| Gauteng              |
+| Puebla               |
+| Songkhla             |
+| Sucre                |
+| Cheju                |
+| Buenos Aires         |
+| Guangdong            |
+| Brunei and Muara     |
+| Gois                 |
+| Inner Mongolia       |
+| Caraga               |
+| Punjab               |
+| Georgia              |
+| Tete                 |
+| Abu Dhabi            |
+| Kyongsangbuk         |
+| Asir                 |
+| Ha Darom             |
+| Kwara & Kogi         |
+| Provence-Alpes-Cte   |
+| Funafuti             |
+| Ivanovo              |
+| Mxico                |
+| North West           |
+| Hubei                |
+| Distrito Federal     |
+| Nordrhein-Westfalen  |
+| Central Java         |
+| Gujarat              |
+| al-Qalyubiya         |
+| Risaralda            |
+| Lima                 |
+| Ktahya               |
+| Smolensk             |
+| Slaskie              |
+| Shandong             |
+| Taka-Karpatia        |
+| Free State           |
+| Coahuila de Zaragoza |
+| Maharashtra          |
+| Gelderland           |
+| Ynlin                |
+| Tennessee            |
+| Hiroshima            |
+| Scotland             |
+| Kilis                |
+| Minsk                |
+| Michigan             |
+| Saitama              |
+| Saint-Denis          |
+| Massachusetts        |
+| Michoacn de Ocampo   |
+| Assam                |
+| Jakarta Raya         |
+| Shanxi               |
+| Bern                 |
+| Ondo & Ekiti         |
+| Pyongyang-si         |
+| North Carolina       |
+| North Austria        |
+| Tel Aviv             |
+| Pays de la Loire     |
+| Gifu                 |
+| Adana                |
+| Xinxiang             |
+| Lilongwe             |
+| Gansu                |
+| Jiangxi              |
+| Perak                |
+| Batman               |
+| Steiermark           |
+| Miranda              |
+| Kerala               |
+| Skikda               |
+| Tamaulipas           |
+| Kirov                |
+| Noord-Brabant        |
+| Chaharmahal va Bakht |
+| Sumy                 |
+| Ontario              |
+| Tabora               |
+| Rostov-na-Donu       |
+| Nyanza               |
+| Tokyo-to             |
+| Baden-Wrttemberg     |
+| Jiangsu              |
+| Haiphong             |
+| Ahal                 |
+| Sulawesi Utara       |
+| Usak                 |
+| Alto Paran           |
+| Santa Catarina       |
+| Kitaa                |
+| Aden                 |
+| Jilin                |
+| Washington           |
+| Taizz                |
+| Haskovo              |
+| Kabol                |
+| Zanzibar West        |
+| Sisilia              |
+| Jaroslavl            |
+| Tamil Nadu           |
+| Asuncin              |
+| Saarland             |
+| Phnom Penh           |
+| Botosani             |
+| Qina                 |
+| Hawalli              |
+| Valle                |
+| Southern Tagalog     |
+| Chollanam            |
+| West Java            |
+| Fukushima            |
+| Hebei                |
+| Tucumn               |
+| Central Visayas      |
+| Kyonggi              |
+| Paran                |
+| Florida              |
+| Tianjin              |
+| Anhalt Sachsen       |
+| Miyazaki             |
+| Minas Gerais         |
+| Central Luzon        |
+| Sagaing              |
+| Sofala               |
+| Santiago             |
+| Cagayan Valley       |
+| Manab                |
+| Osaka                |
+| Severn Morava        |
+| Salzburg             |
+| Wielkopolskie        |
+| Guanajuato           |
+| Illinois             |
+| Bursa                |
+| East Azerbaidzan     |
+| Fujian               |
+| Ponce                |
+| Edo & Delta          |
+| Shiga                |
+| Kowloon and New Kowl |
+| Gurico               |
+| Virginia             |
+| Sharja               |
+| Baskimaa             |
+| Ohio                 |
+| Pietari              |
+| Pohjois-Pohjanmaa    |
+| Kaliningrad          |
+| Liaoning             |
+| Sanaa                |
+| Callao               |
+| Kedah                |
+| Rio de Janeiro       |
+| Lombardia            |
+| Kursk                |
+| Tabuk                |
+| Streymoyar           |
+| Kujawsko-Pomorskie   |
+| Tutuila              |
+| Central              |
+| Morelos              |
+| St George            |
+| Santa F              |
+| Baki                 |
+| Sumqayit             |
+| Sousse               |
+| Western Cape         |
+| Hanoi                |
+| Roraima              |
+| Baja California      |
+| Tongatapu            |
+| Adygea               |
+| Daugavpils           |
+| Tuvassia             |
+| Krasnojarsk          |
+| Nord-Ouest           |
+| Hidalgo              |
+| Shimane              |
+| Bratislava           |
+| Jharkhand            |
+| Arecibo              |
+| Centre               |
+| Par                  |
+| Jalisco              |
+| Okinawa              |
+| Balikesir            |
+| Andhra Pradesh       |
+| Chihuahua            |
+| East Java            |
+| Pernambuco           |
+| East Kasai           |
+| Kurgan               |
+| Kermanshah           |
+| New Hampshire        |
+| Namibe               |
+| Ibaragi              |
+| Hmelnytskyi          |
+| Shaba                |
+| Nakhon Sawan         |
+| Addis Abeba          |
+| Asturia              |
+| al-Qadarif           |
+| Rio Grande do Sul    |
+| Bretagne             |
+| St Thomas            |
+| Northern             |
+| Bauchi & Gombe       |
+| Utrecht              |
+| al-Sharqiya          |
+| Puerto Plata         |
+| Sawhaj               |
+| Oaxaca               |
+| Komi                 |
+| Nizni Novgorod       |
+| Chuquisaca           |
+| KwaZulu-Natal        |
+| Nampula              |
+| Northern Mindanao    |
+| British Colombia     |
+| La Romana            |
+| Copperbelt           |
+| Batna                |
+| Tartumaa             |
+| Baijeri              |
+| Kerman               |
+| Sinaloa              |
+| Zulia                |
+| La Paz               |
+| Ziguinchor           |
+| Caquet               |
+| Irkutsk              |
+| Nova Scotia          |
+| OHiggins             |
+| Hodeida              |
+| Nam Ha               |
+| Aceh                 |
+| Drenthe              |
+| Qubec                |
+| Gaziantep            |
+| Mwanza               |
+| Veracruz             |
+| Denizli              |
+| Ningxia              |
+| Stavropol            |
+| Baja California Sur  |
+| Boyac                |
+| al-Daqahliya         |
+| Istanbul             |
+| Chimborazo           |
+| Zufar                |
+| Apulia               |
+| Lubelskie            |
+| Nagano               |
+| Kalimantan Barat     |
+| Eskisehir            |
+| Volgograd            |
+| Heilongjiang         |
+| Coquimbo             |
+| Battambang           |
+| Sivas                |
+| Gumma                |
+| Khanh Hoa            |
+| Nghe An              |
+| Friuli-Venezia Giuli |
+| Mogiljov             |
+| Benguela             |
+| Mie                  |
+| Chari-Baguirmi       |
+| Kang-won             |
+| Colorado             |
+| Carabobo             |
+| Ruse                 |
+| Toscana              |
+| Sumatera Selatan     |
+| Tadla-Azilal         |
+| Hainan               |
+| Ishikawa             |
+| Zhejiang             |
+| Vojvodina            |
+| Vilna                |
+| Dolnoslaskie         |
+| Sokoto & Kebbi & Zam |
+| Bukarest             |
+| Huanuco              |
+| Tokat                |
+| Anzotegui            |
+| Mazowieckie          |
+| Qaraghandy           |
+| Kaohsiung            |
+| Campeche             |
+| Ninawa               |
+| Central Mindanao     |
+| Guerrero             |
+| Banjul               |
+| Loja                 |
+| al-Manama            |
+| Fejr                 |
+| West Greece          |
+| Piura                |
+| Vaud                 |
++----------------------+
+378 rows in set (0.00 sec)
+
+mysql> SELECT COUNT (*) DISTINCT DISTRICT FROM ADDRESS;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '*) DISTINCT DISTRICT FROM ADDRESS' at line 1
+mysql> SELECT COUNT, DISTINCT DISTRICT FROM ADDRESS;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DISTINCT DISTRICT FROM ADDRESS' at line 1
+mysql> select COUNT(*) FROM ADDRESS WHERE DISTRICT GROUP BY DISTRICT;
+Empty set, 600 warnings (0.01 sec)
+
+mysql> select COUNT(*) , DISTRICT FROM ADDRESS WHERE DISTRICT GROUP BY DISTRICT;
+Empty set, 600 warnings (0.00 sec)
+
+mysql> select COUNT(*) , district from address group by district;
++----------+----------------------+
+| COUNT(*) | district             |
++----------+----------------------+
+|        2 | Alberta              |
+|        2 | QLD                  |
+|        1 | Nagasaki             |
+|        9 | California           |
+|        1 | Attika               |
+|        1 | Mandalay             |
+|        2 | Nantou               |
+|        5 | Texas                |
+|        1 | Central Serbia       |
+|        1 | Hamilton             |
+|        1 | Masqat               |
+|        3 | Esfahan              |
+|        2 | Kanagawa             |
+|        2 | Haryana              |
+|        1 | Osmaniye             |
+|        3 | Madhya Pradesh       |
+|        7 | England              |
+|        1 | Kalmykia             |
+|        2 | Kaduna               |
+|        1 | Northern Cape        |
+|        1 | Nothwest Border Prov |
+|        3 | Dhaka                |
+|        1 | Rabat-Sal-Zammour-Z  |
+|        1 | Liepaja              |
+|        1 | Crdoba               |
+|        2 | Sind                 |
+|        3 |                      |
+|        1 | Southern Mindanao    |
+|        3 | Bihar                |
+|        2 | Yamaguchi            |
+|        4 | Taipei               |
+|        9 | West Bengali         |
+|        8 | Uttar Pradesh        |
+|        1 | Piemonte             |
+|        3 | Okayama              |
+|        1 | Midi-Pyrnes          |
+|        1 | Markazi              |
+|        3 | Henan                |
+|        1 | Chisinau             |
+|        1 | Esprito Santo        |
+|        1 | Oriental             |
+|        1 | Yerevan              |
+|        1 | Nonthaburi           |
+|        2 | Tahiti               |
+|        2 | Lipetsk              |
+|        1 | Antofagasta          |
+|        1 | Moscow (City)        |
+|        1 | Cear                 |
+|        2 | Tatarstan            |
+|        2 | Mekka                |
+|        1 | Khartum              |
+|        3 | Galicia              |
+|        1 | Chiba                |
+|        4 | Moskova              |
+|        1 | Vaduz                |
+|        1 | Sarawak              |
+|        5 | Karnataka            |
+|        4 | Rajasthan            |
+|        1 | Basel-Stadt          |
+|        2 | Missouri             |
+|        1 | Nebraska             |
+|        3 | Sichuan              |
+|        1 | Cayenne              |
+|        1 | Skne ln              |
+|        2 | Hunan                |
+|        1 | Bchar                |
+|        1 | Eastern Visayas      |
+|        2 | National Capital Reg |
+|        1 | Chiayi               |
+|        8 | So Paulo             |
+|        1 | Changhwa             |
+|        1 | Pavlodar             |
+|        4 | Oyo & Osun           |
+|        1 | Mahajanga            |
+|        1 | Krim                 |
+|        4 | Gauteng              |
+|        1 | Puebla               |
+|        1 | Songkhla             |
+|        2 | Sucre                |
+|        1 | Cheju                |
+|       10 | Buenos Aires         |
+|        4 | Guangdong            |
+|        1 | Brunei and Muara     |
+|        5 | Gois                 |
+|        4 | Inner Mongolia       |
+|        2 | Caraga               |
+|        5 | Punjab               |
+|        1 | Georgia              |
+|        1 | Tete                 |
+|        2 | Abu Dhabi            |
+|        1 | Kyongsangbuk         |
+|        1 | Asir                 |
+|        2 | Ha Darom             |
+|        1 | Kwara & Kogi         |
+|        1 | Provence-Alpes-Cte   |
+|        1 | Funafuti             |
+|        1 | Ivanovo              |
+|        4 | Mxico                |
+|        2 | North West           |
+|        5 | Hubei                |
+|        2 | Distrito Federal     |
+|        3 | Nordrhein-Westfalen  |
+|        3 | Central Java         |
+|        3 | Gujarat              |
+|        2 | al-Qalyubiya         |
+|        2 | Risaralda            |
+|        1 | Lima                 |
+|        1 | Ktahya               |
+|        1 | Smolensk             |
+|        3 | Slaskie              |
+|        9 | Shandong             |
+|        1 | Taka-Karpatia        |
+|        1 | Free State           |
+|        3 | Coahuila de Zaragoza |
+|        7 | Maharashtra          |
+|        2 | Gelderland           |
+|        1 | Ynlin                |
+|        2 | Tennessee            |
+|        3 | Hiroshima            |
+|        1 | Scotland             |
+|        1 | Kilis                |
+|        1 | Minsk                |
+|        2 | Michigan             |
+|        3 | Saitama              |
+|        1 | Saint-Denis          |
+|        1 | Massachusetts        |
+|        2 | Michoacn de Ocampo   |
+|        1 | Assam                |
+|        1 | Jakarta Raya         |
+|        2 | Shanxi               |
+|        1 | Bern                 |
+|        3 | Ondo & Ekiti         |
+|        1 | Pyongyang-si         |
+|        1 | North Carolina       |
+|        1 | North Austria        |
+|        2 | Tel Aviv             |
+|        1 | Pays de la Loire     |
+|        1 | Gifu                 |
+|        2 | Adana                |
+|        2 | Xinxiang             |
+|        1 | Lilongwe             |
+|        2 | Gansu                |
+|        1 | Jiangxi              |
+|        1 | Perak                |
+|        1 | Batman               |
+|        1 | Steiermark           |
+|        1 | Miranda              |
+|        2 | Kerala               |
+|        1 | Skikda               |
+|        1 | Tamaulipas           |
+|        1 | Kirov                |
+|        1 | Noord-Brabant        |
+|        1 | Chaharmahal va Bakht |
+|        3 | Sumy                 |
+|        3 | Ontario              |
+|        1 | Tabora               |
+|        1 | Rostov-na-Donu       |
+|        1 | Nyanza               |
+|        2 | Tokyo-to             |
+|        1 | Baden-Wrttemberg     |
+|        2 | Jiangsu              |
+|        1 | Haiphong             |
+|        1 | Ahal                 |
+|        1 | Sulawesi Utara       |
+|        1 | Usak                 |
+|        1 | Alto Paran           |
+|        1 | Santa Catarina       |
+|        1 | Kitaa                |
+|        1 | Aden                 |
+|        2 | Jilin                |
+|        1 | Washington           |
+|        1 | Taizz                |
+|        1 | Haskovo              |
+|        1 | Kabol                |
+|        1 | Zanzibar West        |
+|        1 | Sisilia              |
+|        1 | Jaroslavl            |
+|        5 | Tamil Nadu           |
+|        1 | Asuncin              |
+|        1 | Saarland             |
+|        1 | Phnom Penh           |
+|        1 | Botosani             |
+|        1 | Qina                 |
+|        1 | Hawalli              |
+|        1 | Valle                |
+|        6 | Southern Tagalog     |
+|        1 | Chollanam            |
+|        4 | West Java            |
+|        2 | Fukushima            |
+|        1 | Hebei                |
+|        1 | Tucumn               |
+|        1 | Central Visayas      |
+|        1 | Kyonggi              |
+|        1 | Paran                |
+|        2 | Florida              |
+|        1 | Tianjin              |
+|        1 | Anhalt Sachsen       |
+|        1 | Miyazaki             |
+|        3 | Minas Gerais         |
+|        3 | Central Luzon        |
+|        1 | Sagaing              |
+|        1 | Sofala               |
+|        1 | Santiago             |
+|        1 | Cagayan Valley       |
+|        1 | Manab                |
+|        2 | Osaka                |
+|        1 | Severn Morava        |
+|        1 | Salzburg             |
+|        1 | Wielkopolskie        |
+|        4 | Guanajuato           |
+|        4 | Illinois             |
+|        1 | Bursa                |
+|        1 | East Azerbaidzan     |
+|        1 | Fujian               |
+|        1 | Ponce                |
+|        1 | Edo & Delta          |
+|        1 | Shiga                |
+|        1 | Kowloon and New Kowl |
+|        1 | Gurico               |
+|        1 | Virginia             |
+|        1 | Sharja               |
+|        1 | Baskimaa             |
+|        2 | Ohio                 |
+|        1 | Pietari              |
+|        1 | Pohjois-Pohjanmaa    |
+|        1 | Kaliningrad          |
+|        3 | Liaoning             |
+|        1 | Sanaa                |
+|        1 | Callao               |
+|        1 | Kedah                |
+|        1 | Rio de Janeiro       |
+|        2 | Lombardia            |
+|        1 | Kursk                |
+|        1 | Tabuk                |
+|        1 | Streymoyar           |
+|        1 | Kujawsko-Pomorskie   |
+|        1 | Tutuila              |
+|        3 | Central              |
+|        2 | Morelos              |
+|        1 | St George            |
+|        1 | Santa F              |
+|        1 | Baki                 |
+|        1 | Sumqayit             |
+|        1 | Sousse               |
+|        1 | Western Cape         |
+|        1 | Hanoi                |
+|        1 | Roraima              |
+|        1 | Baja California      |
+|        1 | Tongatapu            |
+|        1 | Adygea               |
+|        1 | Daugavpils           |
+|        1 | Tuvassia             |
+|        2 | Krasnojarsk          |
+|        1 | Nord-Ouest           |
+|        2 | Hidalgo              |
+|        1 | Shimane              |
+|        1 | Bratislava           |
+|        2 | Jharkhand            |
+|        1 | Arecibo              |
+|        1 | Centre               |
+|        1 | Par                  |
+|        2 | Jalisco              |
+|        1 | Okinawa              |
+|        1 | Balikesir            |
+|        3 | Andhra Pradesh       |
+|        2 | Chihuahua            |
+|        2 | East Java            |
+|        1 | Pernambuco           |
+|        1 | East Kasai           |
+|        1 | Kurgan               |
+|        1 | Kermanshah           |
+|        1 | New Hampshire        |
+|        1 | Namibe               |
+|        1 | Ibaragi              |
+|        1 | Hmelnytskyi          |
+|        1 | Shaba                |
+|        1 | Nakhon Sawan         |
+|        1 | Addis Abeba          |
+|        1 | Asturia              |
+|        1 | al-Qadarif           |
+|        3 | Rio Grande do Sul    |
+|        1 | Bretagne             |
+|        1 | St Thomas            |
+|        1 | Northern             |
+|        1 | Bauchi & Gombe       |
+|        1 | Utrecht              |
+|        2 | al-Sharqiya          |
+|        1 | Puerto Plata         |
+|        1 | Sawhaj               |
+|        1 | Oaxaca               |
+|        1 | Komi                 |
+|        1 | Nizni Novgorod       |
+|        1 | Chuquisaca           |
+|        2 | KwaZulu-Natal        |
+|        1 | Nampula              |
+|        2 | Northern Mindanao    |
+|        1 | British Colombia     |
+|        1 | La Romana            |
+|        1 | Copperbelt           |
+|        1 | Batna                |
+|        1 | Tartumaa             |
+|        1 | Baijeri              |
+|        1 | Kerman               |
+|        1 | Sinaloa              |
+|        1 | Zulia                |
+|        1 | La Paz               |
+|        1 | Ziguinchor           |
+|        1 | Caquet               |
+|        1 | Irkutsk              |
+|        1 | Nova Scotia          |
+|        1 | OHiggins             |
+|        1 | Hodeida              |
+|        1 | Nam Ha               |
+|        1 | Aceh                 |
+|        1 | Drenthe              |
+|        1 | Qubec                |
+|        1 | Gaziantep            |
+|        1 | Mwanza               |
+|        1 | Veracruz             |
+|        1 | Denizli              |
+|        1 | Ningxia              |
+|        1 | Stavropol            |
+|        1 | Baja California Sur  |
+|        1 | Boyac                |
+|        1 | al-Daqahliya         |
+|        1 | Istanbul             |
+|        1 | Chimborazo           |
+|        1 | Zufar                |
+|        1 | Apulia               |
+|        1 | Lubelskie            |
+|        1 | Nagano               |
+|        1 | Kalimantan Barat     |
+|        1 | Eskisehir            |
+|        1 | Volgograd            |
+|        2 | Heilongjiang         |
+|        1 | Coquimbo             |
+|        1 | Battambang           |
+|        1 | Sivas                |
+|        1 | Gumma                |
+|        2 | Khanh Hoa            |
+|        1 | Nghe An              |
+|        1 | Friuli-Venezia Giuli |
+|        1 | Mogiljov             |
+|        1 | Benguela             |
+|        1 | Mie                  |
+|        1 | Chari-Baguirmi       |
+|        1 | Kang-won             |
+|        1 | Colorado             |
+|        1 | Carabobo             |
+|        1 | Ruse                 |
+|        1 | Toscana              |
+|        1 | Sumatera Selatan     |
+|        1 | Tadla-Azilal         |
+|        1 | Hainan               |
+|        1 | Ishikawa             |
+|        2 | Zhejiang             |
+|        1 | Vojvodina            |
+|        1 | Vilna                |
+|        1 | Dolnoslaskie         |
+|        1 | Sokoto & Kebbi & Zam |
+|        1 | Bukarest             |
+|        1 | Huanuco              |
+|        1 | Tokat                |
+|        1 | Anzotegui            |
+|        1 | Mazowieckie          |
+|        1 | Qaraghandy           |
+|        1 | Kaohsiung            |
+|        1 | Campeche             |
+|        1 | Ninawa               |
+|        1 | Central Mindanao     |
+|        1 | Guerrero             |
+|        1 | Banjul               |
+|        1 | Loja                 |
+|        1 | al-Manama            |
+|        1 | Fejr                 |
+|        1 | West Greece          |
+|        1 | Piura                |
+|        1 | Vaud                 |
++----------+----------------------+
+378 rows in set (0.00 sec)
+
+mysql> select COUNT(*) , district from address group by district limit ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> select COUNT(*) , district from address group by district limit 10;
++----------+----------------+
+| COUNT(*) | district       |
++----------+----------------+
+|        2 | Alberta        |
+|        2 | QLD            |
+|        1 | Nagasaki       |
+|        9 | California     |
+|        1 | Attika         |
+|        1 | Mandalay       |
+|        2 | Nantou         |
+|        5 | Texas          |
+|        1 | Central Serbia |
+|        1 | Hamilton       |
++----------+----------------+
+10 rows in set (0.00 sec)
+
+mysql> select COUNT(*) AS COUNT , district from address group by district having COUNT >= 5;
++-------+------------------+
+| COUNT | district         |
++-------+------------------+
+|     9 | California       |
+|     5 | Texas            |
+|     7 | England          |
+|     9 | West Bengali     |
+|     8 | Uttar Pradesh    |
+|     5 | Karnataka        |
+|     8 | So Paulo         |
+|    10 | Buenos Aires     |
+|     5 | Gois             |
+|     5 | Punjab           |
+|     5 | Hubei            |
+|     9 | Shandong         |
+|     7 | Maharashtra      |
+|     5 | Tamil Nadu       |
+|     6 | Southern Tagalog |
++-------+------------------+
+15 rows in set (0.02 sec)
+
+mysql>
